@@ -11,8 +11,8 @@
 
 @interface ZoriLinkCell : UICollectionViewCell
 
-@property (strong, nonatomic) IBOutlet UITabBarItem *zoriLinkCounter;
 @property (strong, nonatomic) ZoriLinkCellTooltip *tooltip;
+@property (nonatomic, retain) NSDictionary *link;
 
 - (IBAction)toggleLink:(id)sender;
 

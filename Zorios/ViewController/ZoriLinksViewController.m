@@ -6,19 +6,19 @@
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 
-#import "ZORIViewController.h"
+#import "ZoriLinksViewController.h"
 #import "ZoriLinkCell.h"
 
 #import "UIColor+HTMLColors.h"
 #import <Firebase/Firebase.h>
 
-@interface ZORIViewController ()
+@interface ZoriLinksViewController ()
 
 @property (nonatomic, retain) NSMutableArray *links;
 
 @end
 
-@implementation ZORIViewController
+@implementation ZoriLinksViewController
 
 - (void)viewDidLoad
 {
@@ -34,15 +34,14 @@
     [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *f_links = (NSDictionary*)snapshot.value;
         
-        NSLog(@"%@", f_links);
+        [_links removeAllObjects];
         
         for (NSString * link in f_links) {
-            [_links insertObject:[f_links objectForKey:link] atIndex:_links.count];
+            NSMutableDictionary* values = [[NSMutableDictionary alloc] initWithDictionary:[f_links objectForKey:link]];
+            [values setObject:link forKey:@"identifier"];
+            [_links insertObject:values atIndex:_links.count];
         }
         
-        NSLog(@"%@", _links);
-        
-        //_links = [NSMutableArray arrayWithArray:[(NSDictionary*)snapshot.value allValues]];
         [self.collection reloadData];
     }];
 }
@@ -78,7 +77,7 @@
     [scanner scanHSLColor:&color];
 
     [cell setBackgroundColor:color];
-    [cell.zoriLinkCounter setBadgeValue:[NSString stringWithFormat:@"%d", nbClick]];
+    [cell setLink:(NSDictionary*)[_links objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -86,7 +85,6 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"url"]]];
 }
 
 - (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
@@ -97,9 +95,9 @@
 
 // 1
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
-    int nbClick = [(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] == nil ? 0 :
-                  [[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] intValue];
-    int height = 30 * nbClick + 30;
+//    int nbClick = [(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] == nil ? 0 :
+//                  [[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] intValue];
+//    int height = 30 * nbClick + 30;
     CGSize retval = CGSizeMake(40, 300);
     
     return retval;

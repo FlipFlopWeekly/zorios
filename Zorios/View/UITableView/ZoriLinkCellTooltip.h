@@ -10,4 +10,7 @@
 
 @interface ZoriLinkCellTooltip : UIView
 
+@property (strong, nonatomic) IBOutlet UIButton *playButton;
+@property (strong, nonatomic) IBOutlet UIButton *starButton;
+
 @end

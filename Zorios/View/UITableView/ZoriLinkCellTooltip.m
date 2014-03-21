@@ -27,6 +27,7 @@
         }
         
         self = [arrayOfViews objectAtIndex:1];
+        [self setFrame:frame];
     }
     
     return self;

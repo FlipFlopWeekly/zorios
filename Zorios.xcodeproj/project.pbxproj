@@ -26,28 +26,32 @@
 		3D47C82218D9D64E00488BB0 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D47C82118D9D64D00488BB0 /* libicucore.dylib */; };
 		3D47C82418D9D65F00488BB0 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D47C82318D9D65F00488BB0 /* libc++.dylib */; };
 		3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82518D9DCA300488BB0 /* Main.storyboard */; };
-		3D47C83918D9F3E200488BB0 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82818D9F3E100488BB0 /* Icon-120.png */; };
-		3D47C83A18D9F3E200488BB0 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82918D9F3E100488BB0 /* Icon-72.png */; };
-		3D47C83B18D9F3E200488BB0 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82A18D9F3E100488BB0 /* Icon-72@2x.png */; };
-		3D47C83C18D9F3E200488BB0 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82B18D9F3E100488BB0 /* Icon-76.png */; };
-		3D47C83D18D9F3E200488BB0 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82C18D9F3E100488BB0 /* Icon-76@2x.png */; };
-		3D47C83E18D9F3E200488BB0 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82D18D9F3E100488BB0 /* Icon-iPad-Spotlight-iOS7@2x.png */; };
-		3D47C83F18D9F3E200488BB0 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82E18D9F3E100488BB0 /* Icon-Small-50.png */; };
-		3D47C84018D9F3E200488BB0 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82F18D9F3E100488BB0 /* Icon-Small.png */; };
-		3D47C84118D9F3E200488BB0 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83018D9F3E100488BB0 /* Icon-Small@2x.png */; };
-		3D47C84218D9F3E200488BB0 /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83118D9F3E100488BB0 /* Icon-Spotlight-iOS7.png */; };
-		3D47C84318D9F3E200488BB0 /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83218D9F3E100488BB0 /* Icon-Spotlight-iOS7@2x.png */; };
-		3D47C84418D9F3E200488BB0 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83318D9F3E100488BB0 /* Icon.png */; };
-		3D47C84518D9F3E200488BB0 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83418D9F3E100488BB0 /* Icon@2x.png */; };
 		3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83518D9F3E200488BB0 /* iTunesArtwork */; };
 		3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */; };
-		3D47C84818D9F3E200488BB0 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83718D9F3E200488BB0 /* logo.png */; };
-		3D47C84918D9F3E200488BB0 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83818D9F3E200488BB0 /* logo@2x.png */; };
 		3DE769F718DC2D2000D5D732 /* UIColor+HTMLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE769DE18DC2D2000D5D732 /* UIColor+HTMLColors.m */; };
 		3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */; };
 		3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */; };
 		3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */; };
-		3DE76A1818DC426C00D5D732 /* ZORIViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1418DC426C00D5D732 /* ZORIViewController.m */; };
+		3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1418DC426C00D5D732 /* ZoriLinksViewController.m */; };
+		3DE76A1B18DC46CC00D5D732 /* ZoriAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */; };
+		3DE76A2C18DC479E00D5D732 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A1D18DC479D00D5D732 /* Icon-120.png */; };
+		3DE76A2D18DC479E00D5D732 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A1E18DC479D00D5D732 /* Icon-72.png */; };
+		3DE76A2E18DC479E00D5D732 /* Icon-72@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A1F18DC479D00D5D732 /* Icon-72@2x.png */; };
+		3DE76A2F18DC479E00D5D732 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2018DC479D00D5D732 /* Icon-76.png */; };
+		3DE76A3018DC479E00D5D732 /* Icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2118DC479D00D5D732 /* Icon-76@2x.png */; };
+		3DE76A3118DC479E00D5D732 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2218DC479D00D5D732 /* Icon-iPad-Spotlight-iOS7@2x.png */; };
+		3DE76A3218DC479E00D5D732 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2318DC479D00D5D732 /* Icon-Small-50.png */; };
+		3DE76A3318DC479E00D5D732 /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2418DC479D00D5D732 /* Icon-Small.png */; };
+		3DE76A3418DC479E00D5D732 /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2518DC479D00D5D732 /* Icon-Small@2x.png */; };
+		3DE76A3518DC479E00D5D732 /* Icon-Spotlight-iOS7.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2618DC479D00D5D732 /* Icon-Spotlight-iOS7.png */; };
+		3DE76A3618DC479E00D5D732 /* Icon-Spotlight-iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2718DC479D00D5D732 /* Icon-Spotlight-iOS7@2x.png */; };
+		3DE76A3718DC479E00D5D732 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2818DC479D00D5D732 /* Icon.png */; };
+		3DE76A3818DC479E00D5D732 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2918DC479E00D5D732 /* Icon@2x.png */; };
+		3DE76A3918DC479E00D5D732 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2A18DC479E00D5D732 /* logo.png */; };
+		3DE76A3A18DC479E00D5D732 /* logo@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A2B18DC479E00D5D732 /* logo@2x.png */; };
+		3DE76A3E18DC47CB00D5D732 /* cd_vinyle_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A3D18DC47CB00D5D732 /* cd_vinyle_orange.png */; };
+		3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */; };
+		3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,23 +88,8 @@
 		3D47C82118D9D64D00488BB0 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		3D47C82318D9D65F00488BB0 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		3D47C82518D9DCA300488BB0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		3D47C82818D9F3E100488BB0 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
-		3D47C82918D9F3E100488BB0 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
-		3D47C82A18D9F3E100488BB0 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
-		3D47C82B18D9F3E100488BB0 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
-		3D47C82C18D9F3E100488BB0 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
-		3D47C82D18D9F3E100488BB0 /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
-		3D47C82E18D9F3E100488BB0 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
-		3D47C82F18D9F3E100488BB0 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
-		3D47C83018D9F3E100488BB0 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
-		3D47C83118D9F3E100488BB0 /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
-		3D47C83218D9F3E100488BB0 /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
-		3D47C83318D9F3E100488BB0 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
-		3D47C83418D9F3E100488BB0 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
 		3D47C83518D9F3E200488BB0 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		3D47C83718D9F3E200488BB0 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
-		3D47C83818D9F3E200488BB0 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
 		3DE769DD18DC2D2000D5D732 /* UIColor+HTMLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTMLColors.h"; sourceTree = "<group>"; };
 		3DE769DE18DC2D2000D5D732 /* UIColor+HTMLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTMLColors.m"; sourceTree = "<group>"; };
 		3DE76A0D18DC426C00D5D732 /* ZoriLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCell.h; sourceTree = "<group>"; };
@@ -108,8 +97,30 @@
 		3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriLinkCell.xib; sourceTree = "<group>"; };
 		3DE76A1018DC426C00D5D732 /* ZoriLinkCellTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCellTooltip.h; sourceTree = "<group>"; };
 		3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCellTooltip.m; sourceTree = "<group>"; };
-		3DE76A1318DC426C00D5D732 /* ZORIViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZORIViewController.h; sourceTree = "<group>"; };
-		3DE76A1418DC426C00D5D732 /* ZORIViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZORIViewController.m; sourceTree = "<group>"; };
+		3DE76A1318DC426C00D5D732 /* ZoriLinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinksViewController.h; sourceTree = "<group>"; };
+		3DE76A1418DC426C00D5D732 /* ZoriLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinksViewController.m; sourceTree = "<group>"; };
+		3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriAnimation.h; sourceTree = "<group>"; };
+		3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriAnimation.m; sourceTree = "<group>"; };
+		3DE76A1D18DC479D00D5D732 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
+		3DE76A1E18DC479D00D5D732 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72.png"; sourceTree = "<group>"; };
+		3DE76A1F18DC479D00D5D732 /* Icon-72@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-72@2x.png"; sourceTree = "<group>"; };
+		3DE76A2018DC479D00D5D732 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		3DE76A2118DC479D00D5D732 /* Icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76@2x.png"; sourceTree = "<group>"; };
+		3DE76A2218DC479D00D5D732 /* Icon-iPad-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-iPad-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
+		3DE76A2318DC479D00D5D732 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small-50.png"; sourceTree = "<group>"; };
+		3DE76A2418DC479D00D5D732 /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small.png"; sourceTree = "<group>"; };
+		3DE76A2518DC479D00D5D732 /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Small@2x.png"; sourceTree = "<group>"; };
+		3DE76A2618DC479D00D5D732 /* Icon-Spotlight-iOS7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7.png"; sourceTree = "<group>"; };
+		3DE76A2718DC479D00D5D732 /* Icon-Spotlight-iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-Spotlight-iOS7@2x.png"; sourceTree = "<group>"; };
+		3DE76A2818DC479D00D5D732 /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon.png; sourceTree = "<group>"; };
+		3DE76A2918DC479E00D5D732 /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon@2x.png"; sourceTree = "<group>"; };
+		3DE76A2A18DC479E00D5D732 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		3DE76A2B18DC479E00D5D732 /* logo@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "logo@2x.png"; sourceTree = "<group>"; };
+		3DE76A3D18DC47CB00D5D732 /* cd_vinyle_orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cd_vinyle_orange.png; sourceTree = "<group>"; };
+		3DE76A3F18DC78A200D5D732 /* ZoriAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriAnimationViewController.h; sourceTree = "<group>"; };
+		3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriAnimationViewController.m; sourceTree = "<group>"; };
+		3DE76A4318DC9D7C00D5D732 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
+		3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +198,7 @@
 				3D47C7F218D9CF9600488BB0 /* ZORIAppDelegate.m */,
 				3D47C82518D9DCA300488BB0 /* Main.storyboard */,
 				3D47C7FF18D9CF9700488BB0 /* Images.xcassets */,
+				3DE76A4218DC9D6000D5D732 /* Manager */,
 				3DE76A0B18DC426C00D5D732 /* View */,
 				3DE76A1218DC426C00D5D732 /* ViewController */,
 				3D47C7E918D9CF9600488BB0 /* Supporting Files */,
@@ -226,23 +238,10 @@
 		3D47C82718D9F3E100488BB0 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				3D47C82818D9F3E100488BB0 /* Icon-120.png */,
-				3D47C82918D9F3E100488BB0 /* Icon-72.png */,
-				3D47C82A18D9F3E100488BB0 /* Icon-72@2x.png */,
-				3D47C82B18D9F3E100488BB0 /* Icon-76.png */,
-				3D47C82C18D9F3E100488BB0 /* Icon-76@2x.png */,
-				3D47C82D18D9F3E100488BB0 /* Icon-iPad-Spotlight-iOS7@2x.png */,
-				3D47C82E18D9F3E100488BB0 /* Icon-Small-50.png */,
-				3D47C82F18D9F3E100488BB0 /* Icon-Small.png */,
-				3D47C83018D9F3E100488BB0 /* Icon-Small@2x.png */,
-				3D47C83118D9F3E100488BB0 /* Icon-Spotlight-iOS7.png */,
-				3D47C83218D9F3E100488BB0 /* Icon-Spotlight-iOS7@2x.png */,
-				3D47C83318D9F3E100488BB0 /* Icon.png */,
-				3D47C83418D9F3E100488BB0 /* Icon@2x.png */,
+				3DE76A3B18DC47CB00D5D732 /* Application */,
+				3DE76A1C18DC479D00D5D732 /* Zori */,
 				3D47C83518D9F3E200488BB0 /* iTunesArtwork */,
 				3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */,
-				3D47C83718D9F3E200488BB0 /* logo.png */,
-				3D47C83818D9F3E200488BB0 /* logo@2x.png */,
 			);
 			name = Assets;
 			path = Zorios/Assets;
@@ -278,6 +277,8 @@
 			isa = PBXGroup;
 			children = (
 				3DE76A0C18DC426C00D5D732 /* UITableView */,
+				3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */,
+				3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,10 +298,59 @@
 		3DE76A1218DC426C00D5D732 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				3DE76A1318DC426C00D5D732 /* ZORIViewController.h */,
-				3DE76A1418DC426C00D5D732 /* ZORIViewController.m */,
+				3DE76A3F18DC78A200D5D732 /* ZoriAnimationViewController.h */,
+				3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */,
+				3DE76A1318DC426C00D5D732 /* ZoriLinksViewController.h */,
+				3DE76A1418DC426C00D5D732 /* ZoriLinksViewController.m */,
 			);
 			path = ViewController;
+			sourceTree = "<group>";
+		};
+		3DE76A1C18DC479D00D5D732 /* Zori */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A1D18DC479D00D5D732 /* Icon-120.png */,
+				3DE76A1E18DC479D00D5D732 /* Icon-72.png */,
+				3DE76A1F18DC479D00D5D732 /* Icon-72@2x.png */,
+				3DE76A2018DC479D00D5D732 /* Icon-76.png */,
+				3DE76A2118DC479D00D5D732 /* Icon-76@2x.png */,
+				3DE76A2218DC479D00D5D732 /* Icon-iPad-Spotlight-iOS7@2x.png */,
+				3DE76A2318DC479D00D5D732 /* Icon-Small-50.png */,
+				3DE76A2418DC479D00D5D732 /* Icon-Small.png */,
+				3DE76A2518DC479D00D5D732 /* Icon-Small@2x.png */,
+				3DE76A2618DC479D00D5D732 /* Icon-Spotlight-iOS7.png */,
+				3DE76A2718DC479D00D5D732 /* Icon-Spotlight-iOS7@2x.png */,
+				3DE76A2818DC479D00D5D732 /* Icon.png */,
+				3DE76A2918DC479E00D5D732 /* Icon@2x.png */,
+				3DE76A2A18DC479E00D5D732 /* logo.png */,
+				3DE76A2B18DC479E00D5D732 /* logo@2x.png */,
+			);
+			path = Zori;
+			sourceTree = "<group>";
+		};
+		3DE76A3B18DC47CB00D5D732 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A3C18DC47CB00D5D732 /* Images */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		3DE76A3C18DC47CB00D5D732 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A3D18DC47CB00D5D732 /* cd_vinyle_orange.png */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		3DE76A4218DC9D6000D5D732 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A4318DC9D7C00D5D732 /* FirebaseManager.h */,
+				3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,26 +430,27 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3D47C83B18D9F3E200488BB0 /* Icon-72@2x.png in Resources */,
-				3D47C83D18D9F3E200488BB0 /* Icon-76@2x.png in Resources */,
-				3D47C83F18D9F3E200488BB0 /* Icon-Small-50.png in Resources */,
-				3D47C83C18D9F3E200488BB0 /* Icon-76.png in Resources */,
-				3D47C84918D9F3E200488BB0 /* logo@2x.png in Resources */,
-				3D47C84418D9F3E200488BB0 /* Icon.png in Resources */,
-				3D47C84318D9F3E200488BB0 /* Icon-Spotlight-iOS7@2x.png in Resources */,
-				3D47C84118D9F3E200488BB0 /* Icon-Small@2x.png in Resources */,
+				3DE76A3718DC479E00D5D732 /* Icon.png in Resources */,
+				3DE76A2C18DC479E00D5D732 /* Icon-120.png in Resources */,
 				3D47C80018D9CF9700488BB0 /* Images.xcassets in Resources */,
+				3DE76A2E18DC479E00D5D732 /* Icon-72@2x.png in Resources */,
+				3DE76A3A18DC479E00D5D732 /* logo@2x.png in Resources */,
+				3DE76A3418DC479E00D5D732 /* Icon-Small@2x.png in Resources */,
 				3D47C7ED18D9CF9600488BB0 /* InfoPlist.strings in Resources */,
-				3D47C83918D9F3E200488BB0 /* Icon-120.png in Resources */,
-				3D47C84018D9F3E200488BB0 /* Icon-Small.png in Resources */,
 				3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */,
+				3DE76A3018DC479E00D5D732 /* Icon-76@2x.png in Resources */,
+				3DE76A3E18DC47CB00D5D732 /* cd_vinyle_orange.png in Resources */,
+				3DE76A3118DC479E00D5D732 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */,
-				3D47C84518D9F3E200488BB0 /* Icon@2x.png in Resources */,
+				3DE76A3318DC479E00D5D732 /* Icon-Small.png in Resources */,
+				3DE76A3218DC479E00D5D732 /* Icon-Small-50.png in Resources */,
+				3DE76A2D18DC479E00D5D732 /* Icon-72.png in Resources */,
+				3DE76A2F18DC479E00D5D732 /* Icon-76.png in Resources */,
+				3DE76A3518DC479E00D5D732 /* Icon-Spotlight-iOS7.png in Resources */,
+				3DE76A3818DC479E00D5D732 /* Icon@2x.png in Resources */,
+				3DE76A3918DC479E00D5D732 /* logo.png in Resources */,
 				3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */,
-				3D47C83E18D9F3E200488BB0 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
-				3D47C84818D9F3E200488BB0 /* logo.png in Resources */,
-				3D47C83A18D9F3E200488BB0 /* Icon-72.png in Resources */,
-				3D47C84218D9F3E200488BB0 /* Icon-Spotlight-iOS7.png in Resources */,
+				3DE76A3618DC479E00D5D732 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,9 +472,12 @@
 			files = (
 				3D47C7F318D9CF9600488BB0 /* ZORIAppDelegate.m in Sources */,
 				3D47C7EF18D9CF9600488BB0 /* main.m in Sources */,
-				3DE76A1818DC426C00D5D732 /* ZORIViewController.m in Sources */,
+				3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */,
+				3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */,
 				3DE769F718DC2D2000D5D732 /* UIColor+HTMLColors.m in Sources */,
 				3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */,
+				3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */,
+				3DE76A1B18DC46CC00D5D732 /* ZoriAnimation.m in Sources */,
 				3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

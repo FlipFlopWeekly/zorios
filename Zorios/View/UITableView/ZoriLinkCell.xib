@@ -18,74 +18,52 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <items>
-                            <barButtonItem style="done" systemItem="fastForward" id="cqa-wj-Wot">
+                            <barButtonItem style="done" systemItem="add" id="cqa-wj-Wot">
                                 <connections>
                                     <action selector="toggleLink:" destination="gbT-5h-RgR" id="udl-bQ-gPf"/>
                                 </connections>
                             </barButtonItem>
                         </items>
                     </toolbar>
-                    <tabBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ApF-D7-lQa">
-                        <rect key="frame" x="0.0" y="115" width="40" height="49"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <items>
-                            <tabBarItem title="" badgeValue="12" id="2JN-6Z-9yW"/>
-                        </items>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <color key="selectedImageTintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
             <size key="customSize" width="50" height="157"/>
-            <connections>
-                <outlet property="zoriLinkCounter" destination="2JN-6Z-9yW" id="EK6-d4-PFj"/>
-            </connections>
         </collectionViewCell>
-        <view contentMode="scaleToFill" id="RKs-t7-OPd">
-            <rect key="frame" x="0.0" y="0.0" width="178" height="111"/>
+        <view contentMode="scaleToFill" id="RKs-t7-OPd" customClass="ZoriLinkCellTooltip">
+            <rect key="frame" x="0.0" y="0.0" width="40" height="113"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <view alpha="0.69999999999999973" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g34-y4-edU">
-                    <rect key="frame" x="0.0" y="0.0" width="227" height="267"/>
+                    <rect key="frame" x="0.0" y="-2" width="58" height="269"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lecture" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zps-6z-ZT6">
-                    <rect key="frame" x="20" y="20" width="78" height="31"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="So2-qE-r6q">
+                    <rect key="frame" x="0.0" y="10" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Noter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="61u-ko-tLp">
-                    <rect key="frame" x="20" y="60" width="78" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="17"/>
-                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <nil key="highlightedColor"/>
-                </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rgv-6t-fak">
-                    <rect key="frame" x="120" y="20" width="31" height="31"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" image="Icon-76.png">
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                    <state key="normal" title="►">
+                        <color key="titleColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gfI-QJ-lZD">
-                    <rect key="frame" x="112" y="61" width="46" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TfI-00-MRL">
+                    <rect key="frame" x="0.0" y="60" width="40" height="40"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    <state key="normal" title="...">
+                    <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="30"/>
+                    <state key="normal" title="☆">
+                        <color key="titleColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
             </subviews>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            <connections>
+                <outlet property="playButton" destination="So2-qE-r6q" id="Y9Q-hl-gYd"/>
+                <outlet property="starButton" destination="TfI-00-MRL" id="URw-Qc-BNU"/>
+            </connections>
         </view>
     </objects>
-    <resources>
-        <image name="Icon-76.png" width="76" height="76"/>
-    </resources>
 </document>

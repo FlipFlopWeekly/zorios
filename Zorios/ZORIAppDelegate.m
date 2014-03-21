@@ -8,16 +8,11 @@
 
 #import "ZORIAppDelegate.h"
 
-#import "ZORIViewController.h"
-
 @implementation ZORIAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
-    
-    ZORIViewController *z = [[ZORIViewController alloc] initWithNibName:@"ZORIViewController" bundle:nil];
-    [application.keyWindow setRootViewController:z]; 
     
     return YES;
 }
