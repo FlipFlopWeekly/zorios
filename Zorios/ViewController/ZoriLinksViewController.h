@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoriLinksViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout>
+@interface ZoriLinksViewController : UIViewController <UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIActionSheetDelegate>
 
 @property (strong, nonatomic) IBOutlet UICollectionView *collection;
 

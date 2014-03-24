@@ -8,13 +8,14 @@
 
 #import "ZoriLinksViewController.h"
 #import "ZoriLinkCell.h"
+#import "UISortPopover.h"
 
-#import "UIColorHTMLColors.h"
 #import <Firebase/Firebase.h>
 
 @interface ZoriLinksViewController ()
 
-@property (nonatomic, retain) NSMutableOrderedSet *links;
+@property (nonatomic, retain) NSMutableOrderedSet   *links;
+@property (strong, nonatomic) IBOutlet UIToolbar    *toolbar;
 
 @end
 
@@ -65,10 +66,6 @@
     // Dispose of any resources that can be recreated.
 }
 
-- (BOOL)prefersStatusBarHidden {
-    return YES;
-}
-
 #pragma mark - UICollectionView Datasource
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
@@ -84,19 +81,33 @@
 {
     ZoriLinkCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ZoriLinkCell" forIndexPath:indexPath];
     
-    int nbClick = [(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] == nil ? 0 :
-    [[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] intValue];
-    
-    
-    UIColor *color = nil;
-    NSString *hsla = [NSString stringWithFormat:@"hsla(%f, 100%%, 50%%, 1.0)", fminf(nbClick * 10, 100.0)];
-    NSScanner *scanner = [NSScanner scannerWithString:hsla];
-    [scanner scanHSLColor:&color];
-
-    [cell setBackgroundColor:color];
     [cell setLink:(NSDictionary*)[_links objectAtIndex:indexPath.row]];
     
     return cell;
+}
+
+- (IBAction)sortResults:(id)sender
+{
+    UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:@"Trier les titres" delegate:self cancelButtonTitle:@"Annuler" destructiveButtonTitle:nil otherButtonTitles:@"Date de publication", nil];
+    [action showFromBarButtonItem:sender animated:false];
+}
+
+#pragma mark - UIActionsheetDelegate
+- (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (![[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Annuler"]) {
+        [_links sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            if ([[obj1 objectForKey:@"submitTime"] intValue] < [[obj2 objectForKey:@"submitTime"] intValue]) {
+                return NSOrderedAscending;
+            } else if ([[obj1 objectForKey:@"submitTime"] intValue] > [[obj2 objectForKey:@"submitTime"] intValue]) {
+                return NSOrderedDescending;
+            } else {
+                return NSOrderedSame;
+            }
+        }];
+        
+        [self.collection reloadData];
+    }
 }
 
 #pragma mark - UICollectionViewDelegate

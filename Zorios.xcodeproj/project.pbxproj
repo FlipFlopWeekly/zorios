@@ -28,6 +28,8 @@
 		3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82518D9DCA300488BB0 /* Main.storyboard */; };
 		3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83518D9F3E200488BB0 /* iTunesArtwork */; };
 		3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */; };
+		3DD15AE818E0848C00964BDD /* UISortPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15AE718E0848C00964BDD /* UISortPopover.xib */; };
+		3DD15AEB18E0859B00964BDD /* UISortPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AEA18E0859B00964BDD /* UISortPopover.m */; };
 		3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */; };
 		3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */; };
 		3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */; };
@@ -91,6 +93,9 @@
 		3D47C82518D9DCA300488BB0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3D47C83518D9F3E200488BB0 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
+		3DD15AE718E0848C00964BDD /* UISortPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISortPopover.xib; sourceTree = "<group>"; };
+		3DD15AE918E0859B00964BDD /* UISortPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISortPopover.h; sourceTree = "<group>"; };
+		3DD15AEA18E0859B00964BDD /* UISortPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISortPopover.m; sourceTree = "<group>"; };
 		3DE76A0D18DC426C00D5D732 /* ZoriLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCell.h; sourceTree = "<group>"; };
 		3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCell.m; sourceTree = "<group>"; };
 		3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriLinkCell.xib; sourceTree = "<group>"; };
@@ -251,6 +256,16 @@
 			path = Zorios/Assets;
 			sourceTree = "<group>";
 		};
+		3DD15AE618E0846800964BDD /* UIPopover */ = {
+			isa = PBXGroup;
+			children = (
+				3DD15AE718E0848C00964BDD /* UISortPopover.xib */,
+				3DD15AE918E0859B00964BDD /* UISortPopover.h */,
+				3DD15AEA18E0859B00964BDD /* UISortPopover.m */,
+			);
+			path = UIPopover;
+			sourceTree = "<group>";
+		};
 		3DE769D918DC2D2000D5D732 /* External */ = {
 			isa = PBXGroup;
 			children = (
@@ -263,6 +278,7 @@
 		3DE76A0B18DC426C00D5D732 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3DD15AE618E0846800964BDD /* UIPopover */,
 				3DE76A0C18DC426C00D5D732 /* UITableView */,
 				3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */,
 				3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */,
@@ -463,6 +479,7 @@
 				3DE76A2F18DC479E00D5D732 /* Icon-76.png in Resources */,
 				3DE76A3518DC479E00D5D732 /* Icon-Spotlight-iOS7.png in Resources */,
 				3DE76A3818DC479E00D5D732 /* Icon@2x.png in Resources */,
+				3DD15AE818E0848C00964BDD /* UISortPopover.xib in Resources */,
 				3DE76A3918DC479E00D5D732 /* logo.png in Resources */,
 				3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */,
 				3DE76A3618DC479E00D5D732 /* Icon-Spotlight-iOS7@2x.png in Resources */,
@@ -488,6 +505,7 @@
 				3D47C7F318D9CF9600488BB0 /* ZORIAppDelegate.m in Sources */,
 				3D47C7EF18D9CF9600488BB0 /* main.m in Sources */,
 				3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */,
+				3DD15AEB18E0859B00964BDD /* UISortPopover.m in Sources */,
 				3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */,
 				3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */,
 				3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */,

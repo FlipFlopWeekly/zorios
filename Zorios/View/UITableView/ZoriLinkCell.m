@@ -8,6 +8,13 @@
 
 #import "ZoriLinkCell.h"
 #import <Firebase/Firebase.h>
+#import "UIColorHTMLColors.h"
+
+@interface ZoriLinkCell ()
+@property (strong, nonatomic) IBOutlet UIView *topBarColorView;
+@property (strong, nonatomic) IBOutlet UIView *bottomBarColorView;
+
+@end
 
 @implementation ZoriLinkCell
 @synthesize link;
@@ -31,6 +38,7 @@
         self = [arrayOfViews objectAtIndex:0];
         [self initTooltip];
         
+        [self addObserver:self forKeyPath:@"link" options:NSKeyValueObservingOptionNew context:nil];
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultNotification:) name:@"defaultNotification" object:nil];
     }
     
@@ -72,7 +80,6 @@
 #pragma mark - Notification
 - (void)defaultNotification:(NSNotification *)note
 {
-    //NSLog(@"%@", note);
     NSLog(@"%@", [self.link objectForKey:@"url"]);
 }
 
@@ -101,6 +108,41 @@
 - (void)star
 {
     
+}
+
+#pragma mark - KVO
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if ([keyPath isEqualToString:@"link"]) {
+        int nbClick = [self.link valueForKey:@"nbClick"] == nil ? 0 :
+        [[self.link valueForKey:@"nbClick"] intValue];
+        
+        UIColor *color = nil;
+        NSString *hsla = [NSString stringWithFormat:@"hsla(%f, 99%%, 65%%, 1.0)", fminf(nbClick * 10, 100.0)];
+        NSScanner *scanner = [NSScanner scannerWithString:hsla];
+        [scanner scanHSLColor:&color];
+        
+        UIColor *colorB = nil;
+        NSString *hslaB = [NSString stringWithFormat:@"hsla(%f, 99%%, 30%%, 1.0)", fminf(nbClick * 10, 100.0)];
+        NSScanner *scannerB = [NSScanner scannerWithString:hslaB];
+        [scannerB scanHSLColor:&colorB];
+        
+        float height = nbClick * 12 + 40;
+        height = fmin( 300, height );
+        
+        [_topBarColorView setFrame:CGRectMake(
+                                              _topBarColorView.frame.origin.x,
+                                              (150 - height / 2),
+                                              _topBarColorView.frame.size.width,
+                                              height / 2)];
+        [_topBarColorView setBackgroundColor:color];
+        [_bottomBarColorView setFrame:CGRectMake(
+                                                 _bottomBarColorView.frame.origin.x,
+                                                 150,
+                                                 _bottomBarColorView.frame.size.width,
+                                                 height / 2)];
+        [_bottomBarColorView setBackgroundColor:colorB];
+    }
 }
 
 @end
