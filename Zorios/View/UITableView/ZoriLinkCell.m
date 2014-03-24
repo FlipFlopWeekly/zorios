@@ -98,9 +98,7 @@
     
     int nbClick = [self.link valueForKey:@"nbClick"] == nil ? 0 :
                   [[self.link valueForKey:@"nbClick"] intValue];
-    
-    NSLog(@"%@", [self.link objectForKey:@"identifier"]);
-    
+        
     Firebase *f = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://shining-fire-3337.firebaseio.com/links/%@", [self.link objectForKey:@"identifier"]]];
     [[f childByAppendingPath:@"nbClick"] setValue:[NSNumber numberWithInt:nbClick + 1]];
 }
