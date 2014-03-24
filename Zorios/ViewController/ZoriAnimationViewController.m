@@ -29,7 +29,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    // Load the first request
+    // Pre-Load the first request
     Firebase* f = [[Firebase alloc] initWithUrl:@"https://shining-fire-3337.firebaseio.com/links"];
     [f observeEventType:FEventTypeChildChanged withBlock:nil];
     f = nil;

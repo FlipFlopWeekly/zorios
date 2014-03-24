@@ -14,7 +14,7 @@
 
 @interface ZoriLinksViewController ()
 
-@property (nonatomic, retain) NSMutableDictionary *links;
+@property (nonatomic, retain) NSMutableOrderedSet *links;
 
 @end
 
@@ -29,28 +29,31 @@
     
     Firebase* f = [[Firebase alloc] initWithUrl:@"https://shining-fire-3337.firebaseio.com/links"];
     
-    _links = [[NSMutableDictionary alloc] init];
+    _links = [[NSMutableOrderedSet alloc] init];
     
     [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *f_links = (NSDictionary*)snapshot.value;
         
         [_links removeAllObjects];
         
-        infolog(f_links);
-        
         [f_links enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
             NSDictionary* nextEntry = obj;
             NSString* nextKey       = key;
-            
-            infolog(obj);
-            infolog(key);
-            
+
             NSMutableDictionary* values = [[NSMutableDictionary alloc] initWithDictionary:nextEntry];
             [values setObject:nextKey forKey:@"identifier"];
-            [_links setObject:values forKey:[NSNumber numberWithInt:_links.count]];
+            [_links setObject:values atIndex:_links.count];
         }];
         
-        infolog(_links);
+        [_links sortUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+            if ([[obj1 objectForKey:@"submitTime"] intValue] < [[obj2 objectForKey:@"submitTime"] intValue]) {
+                return NSOrderedAscending;
+            } else if ([[obj1 objectForKey:@"submitTime"] intValue] > [[obj2 objectForKey:@"submitTime"] intValue]) {
+                return NSOrderedDescending;
+            } else {
+                return NSOrderedSame;
+            }
+        }];
         
         [self.collection reloadData];
     }];
@@ -77,8 +80,8 @@
 {
     ZoriLinkCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ZoriLinkCell" forIndexPath:indexPath];
     
-    int nbClick = [(NSDictionary*)[_links objectForKey:[NSNumber numberWithInt:indexPath.row]] valueForKey:@"nbClick"] == nil ? 0 :
-    [[(NSDictionary*)[_links objectForKey:[NSNumber numberWithInt:indexPath.row]] valueForKey:@"nbClick"] intValue];
+    int nbClick = [(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] == nil ? 0 :
+    [[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] intValue];
     
     
     UIColor *color = nil;
@@ -87,7 +90,7 @@
     [scanner scanHSLColor:&color];
 
     [cell setBackgroundColor:color];
-    [cell setLink:(NSDictionary*)[_links objectForKey:[NSNumber numberWithInt:indexPath.row]]];
+    [cell setLink:(NSDictionary*)[_links objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -95,16 +98,13 @@
 #pragma mark - UICollectionViewDelegate
 - (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-}
-
-- (void)collectionView:(UICollectionView *)collectionView didDeselectItemAtIndexPath:(NSIndexPath *)indexPath {
-    // TODO: Deselect item
+    // Custom code : selection
 }
 
 #pragma mark – UICollectionViewDelegateFlowLayout
 
-// 1
-- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
+- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
+{
 //    int nbClick = [(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] == nil ? 0 :
 //                  [[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] intValue];
 //    int height = 30 * nbClick + 30;
@@ -113,9 +113,9 @@
     return retval;
 }
 
-// 3
 - (UIEdgeInsets)collectionView:
-(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section {
+(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+{
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
 

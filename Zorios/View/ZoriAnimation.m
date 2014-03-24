@@ -85,7 +85,7 @@
 - (void)move:(CGPoint)position
 {
     if (self.index < self.pathLogic.count) {
-        [UIView animateWithDuration:0.5 animations:^{
+        [UIView animateWithDuration:0.25 animations:^{
             NSValue *val      = [self.pathLogic objectAtIndex:self.index];
             CGPoint p         = [val CGPointValue];
             self.cd.frame     = CGRectMake(p.x, p.y, self.cd.frame.size.width, self.cd.frame.size.height);
@@ -121,11 +121,11 @@
                 
                     [self move:p];
                 } else {
-                    [UIView animateWithDuration:0.6 animations:^{
+                    [UIView animateWithDuration:0.3 animations:^{
                         self.cd.frame = CGRectMake(self.cd.frame.origin.x + 25, self.cd.frame.origin.y - 25, 100, 100);
                     } completion:^(BOOL finished) {
                         if (finished) {
-                            [UIView animateWithDuration:0.5 animations:^{
+                            [UIView animateWithDuration:0.25 animations:^{
                                 self.cd.frame = CGRectMake(self.frame.size.width + 100, self.cd.frame.origin.y, 100, 100);
                             } completion:^(BOOL finished) {
                                 if (finished) {
