@@ -31,6 +31,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIMenuController *theMenu = [UIMenuController sharedMenuController];
+    CGRect selectionRect = CGRectMake(0, 0, 0, 0);
+    [theMenu setTargetRect:selectionRect inView:self.view];
+    [theMenu setMenuVisible:YES animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
@@ -57,6 +61,8 @@
 {
     UIPasteboard *pb = [UIPasteboard generalPasteboard];
     self.inputLink.text = [pb string];
+    
+    [self.doneItem setEnabled:true];
 }
 
 - (void)createLink

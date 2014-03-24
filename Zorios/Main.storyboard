@@ -151,10 +151,13 @@
                                     <outlet property="delegate" destination="mA6-wn-GrI" id="kRu-Cn-sjI"/>
                                 </connections>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHu-Pn-SDP">
-                                <rect key="frame" x="123" y="246" width="75" height="75"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHu-Pn-SDP">
+                                <rect key="frame" x="88" y="231" width="144" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Clipboard">
+                                <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="15"/>
+                                <inset key="titleEdgeInsets" minX="-230" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="60" minY="0.0" maxX="30" maxY="0.0"/>
+                                <state key="normal" title="    Coller" image="arrow_top.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -196,6 +199,7 @@
     </scenes>
     <resources>
         <image name="Icon-120.png" width="120" height="120"/>
+        <image name="arrow_top.png" width="128" height="128"/>
         <image name="icon_sorting.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
