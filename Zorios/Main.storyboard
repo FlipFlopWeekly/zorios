@@ -95,11 +95,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="F1v-pN-UOB">
-                                <rect key="frame" x="0.0" y="1" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="5" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <barButtonItem width="247" style="plain" systemItem="fixedSpace" id="Eb1-zQ-pjo"/>
+                                    <barButtonItem style="plain" systemItem="add" id="Jbv-2X-sGn">
+                                        <color key="tintColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="mA6-wn-GrI" kind="modal" animates="NO" id="IvQ-0v-aLq"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Eb1-zQ-pjo"/>
                                     <barButtonItem image="icon_sorting.png" style="plain" id="1i7-Do-q9W">
                                         <color key="tintColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
@@ -123,6 +129,70 @@
             </objects>
             <point key="canvasLocation" x="417" y="-328"/>
         </scene>
+        <!--Zori Link Creation View Controller-->
+        <scene sceneID="zk1-Iu-lBp">
+            <objects>
+                <viewController id="mA6-wn-GrI" customClass="ZoriLinkCreationViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wOI-z6-3hV"/>
+                        <viewControllerLayoutGuide type="bottom" id="l3J-cI-6DT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fA5-bf-8Tp">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="♪ The pen explodes and busts, ink spills my guts! ♪" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-hY-ac2">
+                                <rect key="frame" x="20" y="203" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="URL" keyboardAppearance="alert" returnKeyType="done"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mA6-wn-GrI" id="kRu-Cn-sjI"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QHu-Pn-SDP">
+                                <rect key="frame" x="123" y="246" width="75" height="75"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Clipboard">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="copyFromClipboard:" destination="mA6-wn-GrI" eventType="touchUpInside" id="W5X-5e-JZH"/>
+                                </connections>
+                            </button>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-uf-u4A">
+                                <rect key="frame" x="0.0" y="5" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <items>
+                                    <barButtonItem systemItem="cancel" id="REl-zs-qSm">
+                                        <color key="tintColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="hjE-cm-4Nu" kind="custom" customClass="UIDismissSegue" id="UjB-wt-FVa"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="y9I-t3-Rk8"/>
+                                    <barButtonItem enabled="NO" style="done" systemItem="done" id="DyH-Oa-C9W">
+                                        <color key="tintColor" red="0.088530347914423407" green="0.87980309311224492" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <segue destination="hjE-cm-4Nu" kind="custom" identifier="createLink" customClass="UIDismissSegue" id="ZXF-B1-Ucb"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="doneItem" destination="DyH-Oa-C9W" id="afm-Zj-xVW"/>
+                        <outlet property="inputLink" destination="Pwp-hY-ac2" id="n3Q-3g-07s"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ALd-vJ-SP4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="937" y="-320"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Icon-120.png" width="120" height="120"/>
@@ -133,4 +203,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZXF-B1-Ucb"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -1,5 +1,5 @@
 //
-//  UISortPopover.h
+//  UIDismissSegue.h
 //  Zorios
 //
 //  Created by iGitScor on 24/03/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UISortPopover : UIViewController <UITableViewDataSource, UITableViewDelegate>
+@interface UIDismissSegue : UIStoryboardSegue
 
 @end
