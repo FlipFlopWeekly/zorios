@@ -28,7 +28,6 @@
 		3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82518D9DCA300488BB0 /* Main.storyboard */; };
 		3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83518D9F3E200488BB0 /* iTunesArtwork */; };
 		3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */; };
-		3DE769F718DC2D2000D5D732 /* UIColor+HTMLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE769DE18DC2D2000D5D732 /* UIColor+HTMLColors.m */; };
 		3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */; };
 		3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */; };
 		3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */; };
@@ -52,6 +51,7 @@
 		3DE76A3E18DC47CB00D5D732 /* cd_vinyle_orange.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A3D18DC47CB00D5D732 /* cd_vinyle_orange.png */; };
 		3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */; };
 		3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */; };
+		3DE76A4B18E0449F00D5D732 /* UIColorHTMLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4A18E0449F00D5D732 /* UIColorHTMLColors.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -90,8 +90,6 @@
 		3D47C82518D9DCA300488BB0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3D47C83518D9F3E200488BB0 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		3DE769DD18DC2D2000D5D732 /* UIColor+HTMLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HTMLColors.h"; sourceTree = "<group>"; };
-		3DE769DE18DC2D2000D5D732 /* UIColor+HTMLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HTMLColors.m"; sourceTree = "<group>"; };
 		3DE76A0D18DC426C00D5D732 /* ZoriLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCell.h; sourceTree = "<group>"; };
 		3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCell.m; sourceTree = "<group>"; };
 		3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriLinkCell.xib; sourceTree = "<group>"; };
@@ -122,6 +120,8 @@
 		3DE76A4318DC9D7C00D5D732 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
 		3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseManager.m; sourceTree = "<group>"; };
 		3DE76A4718DEECCB00D5D732 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
+		3DE76A4918E0449F00D5D732 /* UIColorHTMLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorHTMLColors.h; sourceTree = "<group>"; };
+		3DE76A4A18E0449F00D5D732 /* UIColorHTMLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorHTMLColors.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -252,27 +252,10 @@
 		3DE769D918DC2D2000D5D732 /* External */ = {
 			isa = PBXGroup;
 			children = (
-				3DE769DA18DC2D2000D5D732 /* UIColor-HTMLColors */,
+				3DE76A4818E0449F00D5D732 /* UIColorHTMLColors */,
 			);
 			name = External;
 			path = Zorios/External;
-			sourceTree = "<group>";
-		};
-		3DE769DA18DC2D2000D5D732 /* UIColor-HTMLColors */ = {
-			isa = PBXGroup;
-			children = (
-				3DE769DC18DC2D2000D5D732 /* Color Extensions */,
-			);
-			path = "UIColor-HTMLColors";
-			sourceTree = "<group>";
-		};
-		3DE769DC18DC2D2000D5D732 /* Color Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				3DE769DD18DC2D2000D5D732 /* UIColor+HTMLColors.h */,
-				3DE769DE18DC2D2000D5D732 /* UIColor+HTMLColors.m */,
-			);
-			path = "Color Extensions";
 			sourceTree = "<group>";
 		};
 		3DE76A0B18DC426C00D5D732 /* View */ = {
@@ -362,6 +345,15 @@
 			);
 			name = Helper;
 			path = Zorios/Helper;
+			sourceTree = "<group>";
+		};
+		3DE76A4818E0449F00D5D732 /* UIColorHTMLColors */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A4918E0449F00D5D732 /* UIColorHTMLColors.h */,
+				3DE76A4A18E0449F00D5D732 /* UIColorHTMLColors.m */,
+			);
+			path = UIColorHTMLColors;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,11 +477,11 @@
 				3D47C7EF18D9CF9600488BB0 /* main.m in Sources */,
 				3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */,
 				3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */,
-				3DE769F718DC2D2000D5D732 /* UIColor+HTMLColors.m in Sources */,
 				3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */,
 				3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */,
 				3DE76A1B18DC46CC00D5D732 /* ZoriAnimation.m in Sources */,
 				3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */,
+				3DE76A4B18E0449F00D5D732 /* UIColorHTMLColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

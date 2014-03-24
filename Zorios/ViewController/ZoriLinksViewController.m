@@ -9,7 +9,7 @@
 #import "ZoriLinksViewController.h"
 #import "ZoriLinkCell.h"
 
-#import "UIColor+HTMLColors.h"
+#import "UIColorHTMLColors.h"
 #import <Firebase/Firebase.h>
 
 @interface ZoriLinksViewController ()
