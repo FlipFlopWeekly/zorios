@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="59" y="552"/>
         </scene>
-        <!--Zori View Controller-->
+        <!--Zori Links View Controller-->
         <scene sceneID="quu-Ml-xbs">
             <objects>
-                <viewController id="hjE-cm-4Nu" userLabel="Zori View Controller" customClass="ZoriLinksViewController" sceneMemberID="viewController">
+                <viewController id="hjE-cm-4Nu" customClass="ZoriLinksViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R3u-rB-RMt"/>
                         <viewControllerLayoutGuide type="bottom" id="FdY-Hl-Hwz"/>
@@ -94,10 +94,23 @@
                                 <rect key="frame" x="104" y="56" width="48" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="F1v-pN-UOB">
+                                <rect key="frame" x="0.0" y="1" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <items>
+                                    <barButtonItem width="247" style="plain" systemItem="fixedSpace" id="Eb1-zQ-pjo"/>
+                                    <barButtonItem image="icon_sorting.png" style="plain" id="1i7-Do-q9W">
+                                        <color key="tintColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="6I8-TH-VdA"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
                     <connections>
                         <outlet property="collection" destination="1X9-D7-P2Z" id="8xF-N5-P4R"/>
                     </connections>
@@ -109,6 +122,7 @@
     </scenes>
     <resources>
         <image name="Icon-120.png" width="120" height="120"/>
+        <image name="icon_sorting.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

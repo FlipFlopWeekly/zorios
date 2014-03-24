@@ -52,6 +52,7 @@
 		3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */; };
 		3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */; };
 		3DE76A4B18E0449F00D5D732 /* UIColorHTMLColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A4A18E0449F00D5D732 /* UIColorHTMLColors.m */; };
+		3DE76A4E18E04B5900D5D732 /* icon_sorting.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A4D18E04B5900D5D732 /* icon_sorting.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +123,7 @@
 		3DE76A4718DEECCB00D5D732 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 		3DE76A4918E0449F00D5D732 /* UIColorHTMLColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIColorHTMLColors.h; sourceTree = "<group>"; };
 		3DE76A4A18E0449F00D5D732 /* UIColorHTMLColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIColorHTMLColors.m; sourceTree = "<group>"; };
+		3DE76A4D18E04B5900D5D732 /* icon_sorting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_sorting.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -316,6 +318,7 @@
 		3DE76A3B18DC47CB00D5D732 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				3DE76A4C18E04B5900D5D732 /* Icons */,
 				3DE76A3C18DC47CB00D5D732 /* Images */,
 			);
 			path = Application;
@@ -354,6 +357,14 @@
 				3DE76A4A18E0449F00D5D732 /* UIColorHTMLColors.m */,
 			);
 			path = UIColorHTMLColors;
+			sourceTree = "<group>";
+		};
+		3DE76A4C18E04B5900D5D732 /* Icons */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A4D18E04B5900D5D732 /* icon_sorting.png */,
+			);
+			path = Icons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -435,6 +446,7 @@
 			files = (
 				3DE76A3718DC479E00D5D732 /* Icon.png in Resources */,
 				3DE76A2C18DC479E00D5D732 /* Icon-120.png in Resources */,
+				3DE76A4E18E04B5900D5D732 /* icon_sorting.png in Resources */,
 				3D47C80018D9CF9700488BB0 /* Images.xcassets in Resources */,
 				3DE76A2E18DC479E00D5D732 /* Icon-72@2x.png in Resources */,
 				3DE76A3A18DC479E00D5D732 /* logo@2x.png in Resources */,
