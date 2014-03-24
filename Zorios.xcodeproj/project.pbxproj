@@ -121,6 +121,7 @@
 		3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriAnimationViewController.m; sourceTree = "<group>"; };
 		3DE76A4318DC9D7C00D5D732 /* FirebaseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirebaseManager.h; sourceTree = "<group>"; };
 		3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirebaseManager.m; sourceTree = "<group>"; };
+		3DE76A4718DEECCB00D5D732 /* Macro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Macro.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +160,7 @@
 				3D47C82718D9F3E100488BB0 /* Assets */,
 				3D47C7E818D9CF9600488BB0 /* Zorios */,
 				3D47C80C18D9CF9700488BB0 /* ZoriosTests */,
+				3DE76A4618DEECCB00D5D732 /* Helper */,
 				3DE769D918DC2D2000D5D732 /* External */,
 				3D47C7DD18D9CF9600488BB0 /* Frameworks */,
 				3D47C7DC18D9CF9600488BB0 /* Products */,
@@ -351,6 +353,15 @@
 				3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		3DE76A4618DEECCB00D5D732 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				3DE76A4718DEECCB00D5D732 /* Macro.h */,
+			);
+			name = Helper;
+			path = Zorios/Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

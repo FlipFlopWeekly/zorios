@@ -2,7 +2,7 @@
 //  main.m
 //  Zorios
 //
-//  Created by CGI on 19/03/2014.
+//  Created by iGitScor on 19/03/2014.
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 

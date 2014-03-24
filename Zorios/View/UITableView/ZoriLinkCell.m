@@ -2,7 +2,7 @@
 //  ZoriLinkCell.m
 //  Zorios
 //
-//  Created by CGI on 19/03/2014.
+//  Created by iGitScor on 19/03/2014.
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 
@@ -29,19 +29,27 @@
         }
         
         self = [arrayOfViews objectAtIndex:0];
-        self.tooltip = [[ZoriLinkCellTooltip alloc] initWithFrame:self.frame];
-        [self.tooltip setFrame:CGRectMake(self.tooltip.frame.origin.x, self.tooltip.frame.origin.y + 46, self.tooltip.frame.size.width, self.tooltip.frame.size.height - 44)];
-        [self.tooltip setHidden:true];
+        [self initTooltip];
         
-        [self.tooltip.playButton addTarget:self action:@selector(playLink) forControlEvents:UIControlEventTouchUpInside];
-        
-        [self addSubview:self.tooltip];
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(defaultNotification:) name:@"defaultNotification" object:nil];
     }
     
     return self;
-    
 }
 
+- (void)initTooltip {
+    self.tooltip = [[ZoriLinkCellTooltip alloc] initWithFrame:self.frame];
+    self.tooltip.frame = CGRectMake(
+                                    self.tooltip.frame.origin.x,
+                                    self.tooltip.frame.origin.y + 46,
+                                    self.tooltip.frame.size.width,
+                                    self.tooltip.frame.size.height - 44);
+    self.tooltip.hidden = true;
+    
+    [self.tooltip.playButton addTarget:self action:@selector(playLink) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self addSubview:self.tooltip];
+}
 
 // Only override drawRect: if you perform custom drawing.
 // An empty implementation adversely affects performance during animation.
@@ -54,16 +62,28 @@
     float previousHeight = size.height;
     float previousOrgY   = origin.y;
     
-    [self setFrame:CGRectMake(origin.x, origin.y + previousHeight, size.width, 0)];
+    self.frame = CGRectMake(origin.x, origin.y + previousHeight, size.width, 0);
     
     [UIView animateWithDuration:duration animations:^{
-        [self setFrame:CGRectMake(origin.x, previousOrgY, size.width, previousHeight)];
+        self.frame = CGRectMake(origin.x, previousOrgY, size.width, previousHeight);
     } completion:nil];
 }
 
-- (IBAction)toggleLink:(id)sender {
+#pragma mark - Notification
+- (void)defaultNotification:(NSNotification *)note
+{
+    //NSLog(@"%@", note);
+    NSLog(@"%@", [self.link objectForKey:@"url"]);
+}
+
+#pragma mark - Toolbar "+" action
+
+- (IBAction)toggleLink:(id)sender
+{
     self.tooltip.hidden = !self.tooltip.hidden;
 }
+
+#pragma mark - Button actions
 
 - (void)playLink
 {
@@ -72,9 +92,15 @@
     int nbClick = [self.link valueForKey:@"nbClick"] == nil ? 0 :
                   [[self.link valueForKey:@"nbClick"] intValue];
     
-    NSLog(@"%@",[self.link objectForKey:@"identifier"]);
+    NSLog(@"%@", [self.link objectForKey:@"identifier"]);
     
-    Firebase* f = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://shining-fire-3337.firebaseio.com/links/%@", [self.link objectForKey:@"identifier"]]];
+    Firebase *f = [[Firebase alloc] initWithUrl:[NSString stringWithFormat:@"https://shining-fire-3337.firebaseio.com/links/%@", [self.link objectForKey:@"identifier"]]];
     [[f childByAppendingPath:@"nbClick"] setValue:[NSNumber numberWithInt:nbClick + 1]];
 }
+
+- (void)star
+{
+    
+}
+
 @end

@@ -2,7 +2,7 @@
 //  ZoriAnimation.m
 //  Zorios
 //
-//  Created by CGI on 21/03/2014.
+//  Created by iGitScor on 21/03/2014.
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 
@@ -44,21 +44,21 @@
         [self.pathLogic addObject:[NSValue valueWithCGPoint:CGPointMake(0, 100)]];
         [self.pathLogic addObject:[NSValue valueWithCGPoint:CGPointMake(100, 100)]];
         
-        self.pathGraphic = [[NSMutableArray alloc] init];
-        UIView *el1 = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 50)];
-        [el1 setBackgroundColor:[UIColor orangeColor]];
+        self.pathGraphic    = [[NSMutableArray alloc] init];
+        UIView *el1         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 50)];
+        el1.backgroundColor = [UIColor orangeColor];
         [self.pathGraphic addObject:el1];
         [self addSubview:el1];
         
-        UIView *el2 = [[UIView alloc] initWithFrame:CGRectMake(-23, 50, 0, 50)];
-        el2.clipsToBounds = YES;
-        el2.layer.cornerRadius = (el2.frame.size.height + 140) / 2 / 2;
-        [el2 setBackgroundColor:[UIColor orangeColor]];
+        UIView *el2             = [[UIView alloc] initWithFrame:CGRectMake(-23, 50, 0, 50)];
+        el2.clipsToBounds       = YES;
+        el2.layer.cornerRadius  = (el2.frame.size.height + 140) / 2 / 2;
+        el2.backgroundColor     = [UIColor orangeColor];
         [self.pathGraphic addObject:el2];
         [self addSubview:el2];
 
-        UIView *el3 = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 0, 50)];
-        [el3 setBackgroundColor:[UIColor orangeColor]];
+        UIView *el3         = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 0, 50)];
+        el3.backgroundColor = [UIColor orangeColor];
         [self.pathGraphic addObject:el3];
         [self addSubview:el3];
     }
@@ -72,13 +72,13 @@
 {
     // Drawing code
     UIImage *vinyle = [UIImage imageNamed:@"cd_vinyle_orange.png"];
-    self.cd = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
-    [self.cd setImage:vinyle];
+    self.cd         = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
+    self.cd.image   = vinyle;
     
     [self addSubview:self.cd];
     
     NSValue *val = [self.pathLogic objectAtIndex:self.index];
-    CGPoint p = [val CGPointValue];
+    CGPoint p    = [val CGPointValue];
     [self move:p];
 }
 
@@ -86,14 +86,13 @@
 {
     if (self.index < self.pathLogic.count) {
         [UIView animateWithDuration:0.5 animations:^{
-            NSValue *val = [self.pathLogic objectAtIndex:self.index];
-            CGPoint p = [val CGPointValue];
-            
-            [self.cd setFrame:CGRectMake(p.x, p.y, self.cd.frame.size.width, self.cd.frame.size.height)];
+            NSValue *val      = [self.pathLogic objectAtIndex:self.index];
+            CGPoint p         = [val CGPointValue];
+            self.cd.frame     = CGRectMake(p.x, p.y, self.cd.frame.size.width, self.cd.frame.size.height);
             self.cd.transform = CGAffineTransformMakeRotation(M_PI);
-            UIView *graph = [self.pathGraphic objectAtIndex:self.index];
+            UIView *graph     = [self.pathGraphic objectAtIndex:self.index];
             
-            float transition ;
+            float transition;
             switch (self.index) {
                 case 0:
                     transition = 94.2;
@@ -118,25 +117,24 @@
                 
                 if (self.index < self.pathLogic.count) {
                     NSValue *val = [self.pathLogic objectAtIndex:self.index];
-                    CGPoint p = [val CGPointValue];
+                    CGPoint p    = [val CGPointValue];
                 
                     [self move:p];
                 } else {
                     [UIView animateWithDuration:0.6 animations:^{
-                        [self.cd setFrame:CGRectMake(self.cd.frame.origin.x + 25, self.cd.frame.origin.y - 25, 100, 100)];
+                        self.cd.frame = CGRectMake(self.cd.frame.origin.x + 25, self.cd.frame.origin.y - 25, 100, 100);
                     } completion:^(BOOL finished) {
                         if (finished) {
                             [UIView animateWithDuration:0.5 animations:^{
-                                [self.cd setFrame:CGRectMake(self.frame.size.width + 100, self.cd.frame.origin.y, 100, 100)];
+                                self.cd.frame = CGRectMake(self.frame.size.width + 100, self.cd.frame.origin.y, 100, 100);
                             } completion:^(BOOL finished) {
                                 if (finished) {
-                                    UILabel *ori = [[UILabel alloc] initWithFrame:CGRectMake(120, 100, 100, 50)];
-                                    [ori setText:@"ORI"];
-                                    [ori setFont:[UIFont fontWithName:@"Arial Rounded MT Bold" size:50.0]];
-                                    [ori setTextColor:[UIColor orangeColor]];
+                                    UILabel *ori  = [[UILabel alloc] initWithFrame:CGRectMake(120, 100, 100, 50)];
+                                    ori.text      = @"ORI";
+                                    ori.font      = [UIFont fontWithName:@"Arial Rounded MT Bold" size:50.0];
+                                    ori.textColor = [UIColor orangeColor];
                                     
                                     [self addSubview:ori];
-                                    
                                     [self performSelector:@selector(complete) withObject:nil afterDelay:2.0];
                                 }
                             }];

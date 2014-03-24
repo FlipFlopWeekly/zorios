@@ -2,7 +2,7 @@
 //  ZORIViewController.m
 //  Zorios
 //
-//  Created by CGI on 19/03/2014.
+//  Created by iGitScor on 19/03/2014.
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 
@@ -14,7 +14,7 @@
 
 @interface ZoriLinksViewController ()
 
-@property (nonatomic, retain) NSMutableArray *links;
+@property (nonatomic, retain) NSMutableDictionary *links;
 
 @end
 
@@ -29,18 +29,28 @@
     
     Firebase* f = [[Firebase alloc] initWithUrl:@"https://shining-fire-3337.firebaseio.com/links"];
     
-    _links = [[NSMutableArray alloc] init];
+    _links = [[NSMutableDictionary alloc] init];
     
     [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         NSDictionary *f_links = (NSDictionary*)snapshot.value;
         
         [_links removeAllObjects];
         
-        for (NSString * link in f_links) {
-            NSMutableDictionary* values = [[NSMutableDictionary alloc] initWithDictionary:[f_links objectForKey:link]];
-            [values setObject:link forKey:@"identifier"];
-            [_links insertObject:values atIndex:_links.count];
-        }
+        infolog(f_links);
+        
+        [f_links enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
+            NSDictionary* nextEntry = obj;
+            NSString* nextKey       = key;
+            
+            infolog(obj);
+            infolog(key);
+            
+            NSMutableDictionary* values = [[NSMutableDictionary alloc] initWithDictionary:nextEntry];
+            [values setObject:nextKey forKey:@"identifier"];
+            [_links setObject:values forKey:[NSNumber numberWithInt:_links.count]];
+        }];
+        
+        infolog(_links);
         
         [self.collection reloadData];
     }];
@@ -67,8 +77,8 @@
 {
     ZoriLinkCell *cell = [cv dequeueReusableCellWithReuseIdentifier:@"ZoriLinkCell" forIndexPath:indexPath];
     
-    int nbClick = [(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] == nil ? 0 :
-    [[(NSDictionary*)[_links objectAtIndex:indexPath.row] valueForKey:@"nbClick"] intValue];
+    int nbClick = [(NSDictionary*)[_links objectForKey:[NSNumber numberWithInt:indexPath.row]] valueForKey:@"nbClick"] == nil ? 0 :
+    [[(NSDictionary*)[_links objectForKey:[NSNumber numberWithInt:indexPath.row]] valueForKey:@"nbClick"] intValue];
     
     
     UIColor *color = nil;
@@ -77,7 +87,7 @@
     [scanner scanHSLColor:&color];
 
     [cell setBackgroundColor:color];
-    [cell setLink:(NSDictionary*)[_links objectAtIndex:indexPath.row]];
+    [cell setLink:(NSDictionary*)[_links objectForKey:[NSNumber numberWithInt:indexPath.row]]];
     
     return cell;
 }

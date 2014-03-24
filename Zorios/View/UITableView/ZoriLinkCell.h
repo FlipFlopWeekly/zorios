@@ -2,7 +2,7 @@
 //  ZoriLinkCell.h
 //  Zorios
 //
-//  Created by CGI on 19/03/2014.
+//  Created by iGitScor on 19/03/2014.
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 
@@ -11,8 +11,8 @@
 
 @interface ZoriLinkCell : UICollectionViewCell
 
-@property (strong, nonatomic) ZoriLinkCellTooltip *tooltip;
-@property (nonatomic, retain) NSDictionary *link;
+@property (strong, nonatomic) ZoriLinkCellTooltip   *tooltip;
+@property (nonatomic, retain) NSDictionary          *link;
 
 - (IBAction)toggleLink:(id)sender;
 

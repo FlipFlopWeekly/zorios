@@ -2,7 +2,7 @@
 //  ZoriAnimationViewController.m
 //  Zorios
 //
-//  Created by CGI on 21/03/2014.
+//  Created by iGitScor on 21/03/2014.
 //  Copyright (c) 2014 FlipFlopCrew. All rights reserved.
 //
 
