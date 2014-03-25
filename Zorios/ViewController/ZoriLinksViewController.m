@@ -55,6 +55,13 @@
     
     self.internetReachability = [Reachability reachabilityForInternetConnection];
 	[self.internetReachability startNotifier];
+    
+    NetworkStatus networkStatus = [self.internetReachability currentReachabilityStatus];
+    if (networkStatus == NotReachable) {
+        for(UIBarButtonItem* bbi in self.toolbar.items) {
+            [bbi setEnabled:false];
+        }
+    }
 }
 
 - (void)didReceiveMemoryWarning
@@ -190,7 +197,7 @@
 }
 
 #pragma mark - Reachability
-- (void) reachabilityChanged:(NSNotification *)note
+- (void)reachabilityChanged:(NSNotification *)note
 {
 	Reachability* curReach = [note object];
 	NSParameterAssert([curReach isKindOfClass:[Reachability class]]);
@@ -198,6 +205,10 @@
     
     if (netStatus != NotReachable) {
         [self.synchroView removeFromSuperview];
+    }
+    
+    for(UIBarButtonItem* bbi in self.toolbar.items) {
+        [bbi setEnabled:(netStatus != NotReachable)];
     }
     
     [self.collection reloadData];
