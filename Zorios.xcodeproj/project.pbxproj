@@ -33,6 +33,18 @@
 		3DD15AEF18E0DFDA00964BDD /* UIDismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AEE18E0DFDA00964BDD /* UIDismissSegue.m */; };
 		3DD15AF218E0E0C900964BDD /* ZoriLinkCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AF118E0E0C900964BDD /* ZoriLinkCreationViewController.m */; };
 		3DD15AF418E0F70300964BDD /* arrow_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15AF318E0F70300964BDD /* arrow_top.png */; };
+		3DD15AF818E0FF6800964BDD /* Zorios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AF618E0FF6800964BDD /* Zorios.xcdatamodeld */; };
+		3DD15AFD18E100FB00964BDD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD15AFC18E100FB00964BDD /* CoreData.framework */; };
+		3DD15B0018E1047200964BDD /* Link.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AFF18E1047200964BDD /* Link.m */; };
+		3DD15B0318E161B800964BDD /* CoreDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B0218E161B800964BDD /* CoreDataManager.m */; };
+		3DD15B0918E167CD00964BDD /* NSObjectAttributeTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B0618E167CD00964BDD /* NSObjectAttributeTools.m */; };
+		3DD15B0A18E167CD00964BDD /* NSObjectTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B0818E167CD00964BDD /* NSObjectTools.m */; };
+		3DD15B0E18E1711600964BDD /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B0D18E1711600964BDD /* Reachability.m */; };
+		3DD15B1118E18A1D00964BDD /* ZoriSynchro.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B1018E18A1D00964BDD /* ZoriSynchro.m */; };
+		3DD15B1318E18A3200964BDD /* ZoriSynchro.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1218E18A3200964BDD /* ZoriSynchro.xib */; };
+		3DD15B1618E18AA400964BDD /* memory_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1418E18AA400964BDD /* memory_save.png */; };
+		3DD15B1718E18AA400964BDD /* paper_plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1518E18AA400964BDD /* paper_plane.png */; };
+		3DD15B1918E18CF200964BDD /* paper_network.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1818E18CF200964BDD /* paper_network.png */; };
 		3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */; };
 		3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */; };
 		3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */; };
@@ -104,6 +116,24 @@
 		3DD15AF018E0E0C900964BDD /* ZoriLinkCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCreationViewController.h; sourceTree = "<group>"; };
 		3DD15AF118E0E0C900964BDD /* ZoriLinkCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCreationViewController.m; sourceTree = "<group>"; };
 		3DD15AF318E0F70300964BDD /* arrow_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_top.png; sourceTree = "<group>"; };
+		3DD15AF718E0FF6800964BDD /* Zorios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zorios.xcdatamodel; sourceTree = "<group>"; };
+		3DD15AFC18E100FB00964BDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		3DD15AFE18E1047200964BDD /* Link.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Link.h; sourceTree = "<group>"; };
+		3DD15AFF18E1047200964BDD /* Link.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Link.m; sourceTree = "<group>"; };
+		3DD15B0118E161B700964BDD /* CoreDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreDataManager.h; sourceTree = "<group>"; };
+		3DD15B0218E161B800964BDD /* CoreDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreDataManager.m; sourceTree = "<group>"; };
+		3DD15B0518E167CD00964BDD /* NSObjectAttributeTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectAttributeTools.h; sourceTree = "<group>"; };
+		3DD15B0618E167CD00964BDD /* NSObjectAttributeTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectAttributeTools.m; sourceTree = "<group>"; };
+		3DD15B0718E167CD00964BDD /* NSObjectTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NSObjectTools.h; sourceTree = "<group>"; };
+		3DD15B0818E167CD00964BDD /* NSObjectTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjectTools.m; sourceTree = "<group>"; };
+		3DD15B0C18E1711600964BDD /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		3DD15B0D18E1711600964BDD /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		3DD15B0F18E18A1D00964BDD /* ZoriSynchro.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriSynchro.h; sourceTree = "<group>"; };
+		3DD15B1018E18A1D00964BDD /* ZoriSynchro.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriSynchro.m; sourceTree = "<group>"; };
+		3DD15B1218E18A3200964BDD /* ZoriSynchro.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriSynchro.xib; sourceTree = "<group>"; };
+		3DD15B1418E18AA400964BDD /* memory_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memory_save.png; sourceTree = "<group>"; };
+		3DD15B1518E18AA400964BDD /* paper_plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_plane.png; sourceTree = "<group>"; };
+		3DD15B1818E18CF200964BDD /* paper_network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_network.png; sourceTree = "<group>"; };
 		3DE76A0D18DC426C00D5D732 /* ZoriLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCell.h; sourceTree = "<group>"; };
 		3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCell.m; sourceTree = "<group>"; };
 		3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriLinkCell.xib; sourceTree = "<group>"; };
@@ -144,6 +174,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD15AFD18E100FB00964BDD /* CoreData.framework in Frameworks */,
 				3D47C82418D9D65F00488BB0 /* libc++.dylib in Frameworks */,
 				3D47C82218D9D64E00488BB0 /* libicucore.dylib in Frameworks */,
 				3D47C81D18D9D22500488BB0 /* SystemConfiguration.framework in Frameworks */,
@@ -194,6 +225,7 @@
 		3D47C7DD18D9CF9600488BB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3DD15AFC18E100FB00964BDD /* CoreData.framework */,
 				3D47C82318D9D65F00488BB0 /* libc++.dylib */,
 				3D47C82118D9D64D00488BB0 /* libicucore.dylib */,
 				3D47C7FA18D9CF9600488BB0 /* Firebase.framework */,
@@ -216,6 +248,8 @@
 				3D47C82518D9DCA300488BB0 /* Main.storyboard */,
 				3D47C7FF18D9CF9700488BB0 /* Images.xcassets */,
 				3DE76A4218DC9D6000D5D732 /* Manager */,
+				3DD15AF518E0FF4B00964BDD /* Model */,
+				3DD15B0418E167CD00964BDD /* NSTools */,
 				3DD15AEC18E0DFB500964BDD /* Storyboard */,
 				3DE76A0B18DC426C00D5D732 /* View */,
 				3DE76A1218DC426C00D5D732 /* ViewController */,
@@ -284,9 +318,40 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		3DD15AF518E0FF4B00964BDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3DD15AF618E0FF6800964BDD /* Zorios.xcdatamodeld */,
+				3DD15AFE18E1047200964BDD /* Link.h */,
+				3DD15AFF18E1047200964BDD /* Link.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3DD15B0418E167CD00964BDD /* NSTools */ = {
+			isa = PBXGroup;
+			children = (
+				3DD15B0518E167CD00964BDD /* NSObjectAttributeTools.h */,
+				3DD15B0618E167CD00964BDD /* NSObjectAttributeTools.m */,
+				3DD15B0718E167CD00964BDD /* NSObjectTools.h */,
+				3DD15B0818E167CD00964BDD /* NSObjectTools.m */,
+			);
+			path = NSTools;
+			sourceTree = "<group>";
+		};
+		3DD15B0B18E1711600964BDD /* Reachability */ = {
+			isa = PBXGroup;
+			children = (
+				3DD15B0C18E1711600964BDD /* Reachability.h */,
+				3DD15B0D18E1711600964BDD /* Reachability.m */,
+			);
+			path = Reachability;
+			sourceTree = "<group>";
+		};
 		3DE769D918DC2D2000D5D732 /* External */ = {
 			isa = PBXGroup;
 			children = (
+				3DD15B0B18E1711600964BDD /* Reachability */,
 				3DE76A4818E0449F00D5D732 /* UIColorHTMLColors */,
 			);
 			name = External;
@@ -300,6 +365,9 @@
 				3DE76A0C18DC426C00D5D732 /* UITableView */,
 				3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */,
 				3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */,
+				3DD15B0F18E18A1D00964BDD /* ZoriSynchro.h */,
+				3DD15B1018E18A1D00964BDD /* ZoriSynchro.m */,
+				3DD15B1218E18A3200964BDD /* ZoriSynchro.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -365,6 +433,9 @@
 			children = (
 				3DD15AF318E0F70300964BDD /* arrow_top.png */,
 				3DE76A3D18DC47CB00D5D732 /* cd_vinyle_orange.png */,
+				3DD15B1418E18AA400964BDD /* memory_save.png */,
+				3DD15B1818E18CF200964BDD /* paper_network.png */,
+				3DD15B1518E18AA400964BDD /* paper_plane.png */,
 			);
 			path = Images;
 			sourceTree = "<group>";
@@ -372,6 +443,8 @@
 		3DE76A4218DC9D6000D5D732 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
+				3DD15B0118E161B700964BDD /* CoreDataManager.h */,
+				3DD15B0218E161B800964BDD /* CoreDataManager.m */,
 				3DE76A4318DC9D7C00D5D732 /* FirebaseManager.h */,
 				3DE76A4418DC9D7C00D5D732 /* FirebaseManager.m */,
 			);
@@ -482,6 +555,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3DE76A3718DC479E00D5D732 /* Icon.png in Resources */,
+				3DD15B1918E18CF200964BDD /* paper_network.png in Resources */,
 				3DE76A2C18DC479E00D5D732 /* Icon-120.png in Resources */,
 				3DE76A4E18E04B5900D5D732 /* icon_sorting.png in Resources */,
 				3D47C80018D9CF9700488BB0 /* Images.xcassets in Resources */,
@@ -490,9 +564,11 @@
 				3DE76A3A18DC479E00D5D732 /* logo@2x.png in Resources */,
 				3DE76A3418DC479E00D5D732 /* Icon-Small@2x.png in Resources */,
 				3D47C7ED18D9CF9600488BB0 /* InfoPlist.strings in Resources */,
+				3DD15B1718E18AA400964BDD /* paper_plane.png in Resources */,
 				3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */,
 				3DE76A3018DC479E00D5D732 /* Icon-76@2x.png in Resources */,
 				3DE76A3E18DC47CB00D5D732 /* cd_vinyle_orange.png in Resources */,
+				3DD15B1318E18A3200964BDD /* ZoriSynchro.xib in Resources */,
 				3DE76A3118DC479E00D5D732 /* Icon-iPad-Spotlight-iOS7@2x.png in Resources */,
 				3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */,
 				3DE76A3318DC479E00D5D732 /* Icon-Small.png in Resources */,
@@ -505,6 +581,7 @@
 				3DE76A3918DC479E00D5D732 /* logo.png in Resources */,
 				3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */,
 				3DE76A3618DC479E00D5D732 /* Icon-Spotlight-iOS7@2x.png in Resources */,
+				3DD15B1618E18AA400964BDD /* memory_save.png in Resources */,
 				3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,17 +601,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DD15B0918E167CD00964BDD /* NSObjectAttributeTools.m in Sources */,
 				3D47C7F318D9CF9600488BB0 /* ZORIAppDelegate.m in Sources */,
+				3DD15B0018E1047200964BDD /* Link.m in Sources */,
 				3D47C7EF18D9CF9600488BB0 /* main.m in Sources */,
 				3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */,
 				3DD15AEB18E0859B00964BDD /* UISortPopover.m in Sources */,
+				3DD15B1118E18A1D00964BDD /* ZoriSynchro.m in Sources */,
 				3DD15AEF18E0DFDA00964BDD /* UIDismissSegue.m in Sources */,
 				3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */,
 				3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */,
+				3DD15B0A18E167CD00964BDD /* NSObjectTools.m in Sources */,
 				3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */,
 				3DE76A1B18DC46CC00D5D732 /* ZoriAnimation.m in Sources */,
+				3DD15AF818E0FF6800964BDD /* Zorios.xcdatamodeld in Sources */,
 				3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */,
+				3DD15B0318E161B800964BDD /* CoreDataManager.m in Sources */,
 				3DD15AF218E0E0C900964BDD /* ZoriLinkCreationViewController.m in Sources */,
+				3DD15B0E18E1711600964BDD /* Reachability.m in Sources */,
 				3DE76A4B18E0449F00D5D732 /* UIColorHTMLColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -766,6 +850,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		3DD15AF618E0FF6800964BDD /* Zorios.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				3DD15AF718E0FF6800964BDD /* Zorios.xcdatamodel */,
+			);
+			currentVersion = 3DD15AF718E0FF6800964BDD /* Zorios.xcdatamodel */;
+			path = Zorios.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 3D47C7D318D9CF9600488BB0 /* Project object */;
 }

@@ -43,6 +43,11 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (BOOL)prefersStatusBarHidden
+{
+    return true;
+}
+
 - (void) observeValueForKeyPath:(NSString*)keyPath ofObject:(id)object change:(NSDictionary*)change context:(void*)context {
     if ([keyPath isEqual:@"completed"]) {
         [self performSegueWithIdentifier:@"displayHome" sender:nil];

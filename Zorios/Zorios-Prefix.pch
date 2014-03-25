@@ -15,4 +15,11 @@
     #import <Foundation/Foundation.h>
 
     #import "Macro.h"
+
+    #import "ZORIAppDelegate.h"
+    #import "CoreDataManager.h"
+
+    #import "NSObjectTools.h"
+    #import "NSObjectAttributeTools.h"
+    #import "Reachability.h"
 #endif
