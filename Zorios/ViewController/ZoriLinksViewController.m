@@ -150,9 +150,7 @@
 
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
-    CGSize retval = CGSizeMake(40, 300);
-    
-    return retval;
+    return CGSizeMake(40, 300);
 }
 
 - (UIEdgeInsets)collectionView:
