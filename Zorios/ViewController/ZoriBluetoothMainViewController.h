@@ -16,6 +16,5 @@
 @property (strong, nonatomic) IBOutlet UIButton *connect;
 @property (strong, nonatomic) IBOutlet UIButton *disconnect;
 @property (strong, nonatomic) IBOutlet UIButton *send;
-@property (strong, nonatomic) IBOutlet UITextField *textfield;
 
 @end

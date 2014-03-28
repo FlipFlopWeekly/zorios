@@ -68,6 +68,16 @@
                     <view key="view" contentMode="scaleToFill" id="RS2-kC-5nW">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-5a-aoh">
+                                <rect key="frame" x="80" y="269" width="147" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Reset configuration">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" systemItem="more" id="5kA-qf-f8R" userLabel="Tab Bar Item"/>
@@ -77,7 +87,7 @@
             </objects>
             <point key="canvasLocation" x="1621" y="447"/>
         </scene>
-        <!--View Controller-->
+        <!--View Controller - Profile-->
         <scene sceneID="3m6-8t-dMs">
             <objects>
                 <viewController id="zZT-Uo-EjP" sceneMemberID="viewController">
@@ -175,7 +185,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="KGy-Ue-QHb"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Icon.png" id="KGy-Ue-QHb"/>
                     <navigationItem key="navigationItem" id="ejp-y2-OLZ"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -217,7 +227,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgG-UN-69W">
-                                <rect key="frame" x="69" y="210" width="182" height="48"/>
+                                <rect key="frame" x="69" y="325" width="182" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Synchronize" image="icon_bluetooth.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -226,12 +236,15 @@
                                     <segue destination="Bqp-4M-fWG" kind="push" identifier="synchorPeripheral" id="xbN-Y1-U3W"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud1-ky-DX8">
-                                <rect key="frame" x="69" y="97" width="182" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud1-ky-DX8">
+                                <rect key="frame" x="69" y="205" width="182" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Show devices" image="icon_device.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="2qu-K1-n2h" kind="push" identifier="viewDevices" id="9BD-nJ-1lX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -244,6 +257,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e4C-ya-JaO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2173" y="-328"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="oTI-ez-WRx">
+            <objects>
+                <tableViewController id="2qu-K1-n2h" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="zON-PU-dO4">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tgk-bo-lQ2">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tgk-bo-lQ2" id="2dL-56-tJU">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="2qu-K1-n2h" id="naQ-OP-tVO"/>
+                            <outlet property="delegate" destination="2qu-K1-n2h" id="KUp-rT-BmI"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="b9X-gv-efa"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5LO-yu-lXb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2715" y="41"/>
         </scene>
         <!--Zori Bluetooth Main View Controller-->
         <scene sceneID="e1S-nB-Aos">
@@ -258,44 +301,45 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-SM-wG6">
-                                <rect key="frame" x="83" y="309" width="155" height="48"/>
+                                <rect key="frame" x="83" y="236" width="155" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="-43" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="107" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Connect" image="icon_bluetooth.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnConnect:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="D1V-qR-EHY"/>
+                                    <action selector="connect:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="naj-HT-uBd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJJ-nD-BTB">
-                                <rect key="frame" x="83" y="365" width="155" height="48"/>
+                                <rect key="frame" x="83" y="236" width="155" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <inset key="titleEdgeInsets" minX="9" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="titleEdgeInsets" minX="-47" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="imageEdgeInsets" minX="107" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title=" Disconnect" image="icon_bluetooth.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnDisconnect:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="4zq-2a-Zlb"/>
+                                    <action selector="disconnect:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="Q6q-91-F7I"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4j-Ls-NEC">
-                                <rect key="frame" x="217" y="172" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4j-Ls-NEC">
+                                <rect key="frame" x="20" y="343" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Send">
+                                <state key="normal" title=" Synchronize device" image="data_send.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="btnSend:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="kmF-8V-ohI"/>
+                                    <action selector="sendData:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="Wl6-Od-gjt"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bRC-Le-nAr">
-                                <rect key="frame" x="83" y="172" width="126" height="30"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-xY-EJ9">
+                                <rect key="frame" x="20" y="392" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
+                                <state key="normal" title=" Send links" image="data_send.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -305,7 +349,6 @@
                         <outlet property="connect" destination="FyH-SM-wG6" id="AOl-xE-0Zy"/>
                         <outlet property="disconnect" destination="BJJ-nD-BTB" id="D9p-6K-AuN"/>
                         <outlet property="send" destination="e4j-Ls-NEC" id="2wC-P0-ksn"/>
-                        <outlet property="textfield" destination="bRC-Le-nAr" id="NCj-u7-Re5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptM-CW-XUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -317,6 +360,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" id="efy-fF-Q5s" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="MaD-eE-dNG"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" id="K6h-aV-k2D">
                         <rect key="frame" x="0.0" y="0.0" width="0.0" height="44"/>
@@ -481,7 +525,9 @@
     </scenes>
     <resources>
         <image name="Icon-120.png" width="120" height="120"/>
+        <image name="Icon.png" width="57" height="57"/>
         <image name="arrow_top.png" width="128" height="128"/>
+        <image name="data_send.png" width="64" height="64"/>
         <image name="icon_bluetooth.png" width="48" height="48"/>
         <image name="icon_device.png" width="48" height="48"/>
         <image name="icon_item_device.png" width="40" height="40"/>

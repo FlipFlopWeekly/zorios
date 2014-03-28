@@ -52,6 +52,7 @@
 		3DD15B3118E4385500964BDD /* ZoriAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B3018E4385500964BDD /* ZoriAccountViewController.m */; };
 		3DD15B3318E43E3D00964BDD /* icon_item_device.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B3218E43E3D00964BDD /* icon_item_device.png */; };
 		3DD15B3718E4767600964BDD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD15B3618E4767600964BDD /* GameKit.framework */; };
+		3DD15B8718E5649200964BDD /* data_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B8618E5649200964BDD /* data_send.png */; };
 		3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */; };
 		3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */; };
 		3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */; };
@@ -152,6 +153,7 @@
 		3DD15B3218E43E3D00964BDD /* icon_item_device.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_item_device.png; sourceTree = "<group>"; };
 		3DD15B3418E452FB00964BDD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		3DD15B3618E4767600964BDD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3DD15B8618E5649200964BDD /* data_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = data_send.png; sourceTree = "<group>"; };
 		3DE76A0D18DC426C00D5D732 /* ZoriLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCell.h; sourceTree = "<group>"; };
 		3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCell.m; sourceTree = "<group>"; };
 		3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriLinkCell.xib; sourceTree = "<group>"; };
@@ -459,6 +461,7 @@
 			children = (
 				3DD15AF318E0F70300964BDD /* arrow_top.png */,
 				3DE76A3D18DC47CB00D5D732 /* cd_vinyle_orange.png */,
+				3DD15B8618E5649200964BDD /* data_send.png */,
 				3DD15B1418E18AA400964BDD /* memory_save.png */,
 				3DD15B1818E18CF200964BDD /* paper_network.png */,
 				3DD15B1518E18AA400964BDD /* paper_plane.png */,
@@ -609,6 +612,7 @@
 				3DE76A2D18DC479E00D5D732 /* Icon-72.png in Resources */,
 				3DE76A2F18DC479E00D5D732 /* Icon-76.png in Resources */,
 				3DE76A3518DC479E00D5D732 /* Icon-Spotlight-iOS7.png in Resources */,
+				3DD15B8718E5649200964BDD /* data_send.png in Resources */,
 				3DE76A3818DC479E00D5D732 /* Icon@2x.png in Resources */,
 				3DD15AE818E0848C00964BDD /* UISortPopover.xib in Resources */,
 				3DE76A3918DC479E00D5D732 /* logo.png in Resources */,

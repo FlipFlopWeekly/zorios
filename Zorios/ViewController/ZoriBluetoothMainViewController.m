@@ -7,6 +7,7 @@
 //
 
 #import "ZoriBluetoothMainViewController.h"
+#import "zlib.h"
 
 @interface ZoriBluetoothMainViewController ()
 
@@ -29,8 +30,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [_connect setHidden:NO];
-    [_disconnect setHidden:YES];
+    [self toggleButtons:NO];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -66,12 +66,14 @@
 }
 */
 
+#pragma mark - GKPeerPickerController delegate
+
 - (void)peerPickerController:(GKPeerPickerController *)localPicker didConnectPeer:(NSString *)peerID toSession:(GKSession *)session
 {
-    self.currentSession = session;
-    session.delegate = self;
-    [session setDataReceiveHandler:self withContext:nil];
-    localPicker.delegate = nil;
+    self.currentSession             = session;
+    self.currentSession.delegate    = self;
+    [self.currentSession setDataReceiveHandler:self withContext:nil];
+    localPicker.delegate            = nil;
     
     [localPicker dismiss];
 }
@@ -80,27 +82,10 @@
 {
     localPicker.delegate = nil;
     
-    [_connect setHidden:NO];
-    [_disconnect setHidden:YES];
+    [self toggleButtons:NO];
 }
 
--(IBAction) btnDisconnect:(id) sender {
-    [self.currentSession disconnectFromAllPeers];
-    self.currentSession = nil;
-    
-    [_connect setHidden:NO];
-    [_disconnect setHidden:YES];
-}
-
--(IBAction) btnConnect:(id) sender {
-    picker = [[GKPeerPickerController alloc] init];
-    picker.delegate = self;
-    picker.connectionTypesMask = GKPeerPickerConnectionTypeNearby;
-    
-    [_connect setHidden:YES];
-    [_disconnect setHidden:NO];
-    [picker show];
-}
+#pragma mark - GKSession delegate
 
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state
 {
@@ -110,44 +95,66 @@
         NSLog(@"disconnected");
         self.currentSession = nil;
         
-        [_connect setHidden:NO];
-        [_disconnect setHidden:YES];
+        [self toggleButtons:NO];
     }
 }
 
-- (void)mySendDataToPeers:(NSData *) data
+- (void)mySendDataToPeers:(NSData *)data
 {
-    if (self.currentSession)
+    if (self.currentSession) {
         [self.currentSession sendDataToAllPeers:data
                                    withDataMode:GKSendDataReliable
                                           error:nil];
+    }
 }
 
--(IBAction) btnSend:(id) sender
+- (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
-    //---convert an NSString object to NSData---
-    NSData* data;
-    NSString *str = [NSString stringWithString:_textfield.text];
-    data = [str dataUsingEncoding: NSASCIIStringEncoding];
-    [self mySendDataToPeers:data];
-}
-
-- (void) receiveData:(NSData *)data
-            fromPeer:(NSString *)peer
-           inSession:(GKSession *)session
-             context:(void *)context {
-    
-    //---convert the NSData to NSString---
-    NSString* str;
-    str = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
-    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data received"
-                                                    message:str
-                                                   delegate:self
-                                          cancelButtonTitle:@"OK"
-                                          otherButtonTitles:nil];
+    NSString *str       = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"Data received"
+                                                     message:str
+                                                    delegate:self
+                                           cancelButtonTitle:@"OK"
+                                           otherButtonTitles:nil];
     [alert show];
 }
 
+#pragma mark - IBAction
 
+- (IBAction)sendData:(id)sender
+{
+    UIDevice *device    = [UIDevice currentDevice];
+    NSString *uuid      = [[device identifierForVendor] UUIDString];
+    NSString *str       = [NSString stringWithString:uuid];
+    NSData *data        = [str dataUsingEncoding:NSASCIIStringEncoding];
+    
+    [self mySendDataToPeers:data];
+}
+
+
+- (IBAction)disconnect:(id)sender
+{
+    [self.currentSession disconnectFromAllPeers];
+    self.currentSession = nil;
+    
+    [self toggleButtons:NO];
+}
+
+- (IBAction)connect:(id)sender
+{
+    picker                      = [[GKPeerPickerController alloc] init];
+    picker.delegate             = self;
+    picker.connectionTypesMask  = GKPeerPickerConnectionTypeNearby;
+    
+    [self toggleButtons:YES];
+    [picker show];
+}
+
+- (void)toggleButtons:(bool)connectWillBeHidden
+{
+    [_connect setHidden:connectWillBeHidden];
+    [_send setHidden:!connectWillBeHidden];
+    [_disconnect setHidden:!connectWillBeHidden];
+}
 
 @end
