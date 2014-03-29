@@ -267,7 +267,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Tgk-bo-lQ2">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="deviceCell" id="Tgk-bo-lQ2">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tgk-bo-lQ2" id="2dL-56-tJU">
@@ -330,7 +330,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="sendData:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="Wl6-Od-gjt"/>
+                                    <action selector="synchronizeDevice:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="oYk-qY-4z1"/>
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-xY-EJ9">
@@ -339,6 +339,9 @@
                                 <state key="normal" title=" Send links" image="data_send.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendDatabase:" destination="Bqp-4M-fWG" eventType="touchUpInside" id="Od1-2t-6au"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -348,7 +351,8 @@
                     <connections>
                         <outlet property="connect" destination="FyH-SM-wG6" id="AOl-xE-0Zy"/>
                         <outlet property="disconnect" destination="BJJ-nD-BTB" id="D9p-6K-AuN"/>
-                        <outlet property="send" destination="e4j-Ls-NEC" id="2wC-P0-ksn"/>
+                        <outlet property="send" destination="DxW-xY-EJ9" id="1fp-pw-8Jd"/>
+                        <outlet property="synchronize" destination="e4j-Ls-NEC" id="pE1-X2-7Xd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ptM-CW-XUi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -418,7 +422,7 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <items>
-                                    <barButtonItem style="plain" systemItem="add" id="Jbv-2X-sGn">
+                                    <barButtonItem tag="1" style="plain" systemItem="add" id="Jbv-2X-sGn">
                                         <color key="tintColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <segue destination="mA6-wn-GrI" kind="modal" animates="NO" id="IvQ-0v-aLq"/>
@@ -432,7 +436,7 @@
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="tsz-rS-o9i"/>
-                                    <barButtonItem image="icon_sorting.png" style="done" id="1i7-Do-q9W">
+                                    <barButtonItem tag="1" image="icon_sorting.png" style="done" id="1i7-Do-q9W">
                                         <color key="tintColor" red="1" green="0.64741104009999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <action selector="sortResults:" destination="hjE-cm-4Nu" id="5a2-XE-9LQ"/>

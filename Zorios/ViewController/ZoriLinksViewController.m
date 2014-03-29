@@ -30,6 +30,8 @@
 
 @implementation ZoriLinksViewController
 
+const int toDisableIfNoNetworkAccess = 1;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -59,7 +61,9 @@
     NetworkStatus networkStatus = [self.internetReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
         for(UIBarButtonItem* bbi in self.toolbar.items) {
-            [bbi setEnabled:false];
+            if (bbi.tag == toDisableIfNoNetworkAccess) {
+                [bbi setEnabled:false];
+            }
         }
     }
 }

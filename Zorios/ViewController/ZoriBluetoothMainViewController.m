@@ -11,6 +11,8 @@
 
 @interface ZoriBluetoothMainViewController ()
 
+@property (nonatomic, retain) NSString *currentDevice;
+
 @end
 
 @implementation ZoriBluetoothMainViewController
@@ -74,14 +76,12 @@
     self.currentSession.delegate    = self;
     [self.currentSession setDataReceiveHandler:self withContext:nil];
     localPicker.delegate            = nil;
-    
     [localPicker dismiss];
 }
 
 - (void)peerPickerControllerDidCancel:(GKPeerPickerController *)localPicker
 {
     localPicker.delegate = nil;
-    
     [self toggleButtons:NO];
 }
 
@@ -89,12 +89,8 @@
 
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state
 {
-    if (state == GKPeerStateConnected) {
-        NSLog(@"connected");
-    } else if (state == GKPeerStateDisconnected) {
-        NSLog(@"disconnected");
+    if (state == GKPeerStateDisconnected) {
         self.currentSession = nil;
-        
         [self toggleButtons:NO];
     }
 }
@@ -110,7 +106,15 @@
 
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
-    NSString *str       = [[NSString alloc] initWithData:data encoding:NSASCIIStringEncoding];
+    NSDictionary *dict  = (NSDictionary*)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSString *str;
+    
+    if (_currentDevice == nil) {
+        str = [dict objectForKey:@"device"];
+    } else {
+        str = [dict objectForKey:@"data"];
+    }
+    
     UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"Data received"
                                                      message:str
                                                     delegate:self
@@ -121,12 +125,34 @@
 
 #pragma mark - IBAction
 
-- (IBAction)sendData:(id)sender
+- (IBAction)synchronizeDevice:(id)sender
 {
     UIDevice *device    = [UIDevice currentDevice];
     NSString *uuid      = [[device identifierForVendor] UUIDString];
     NSString *str       = [NSString stringWithString:uuid];
-    NSData *data        = [str dataUsingEncoding:NSASCIIStringEncoding];
+    NSDictionary *dict  = [NSDictionary dictionaryWithObjectsAndKeys:str, @"device", nil];
+    NSData *data        = [NSKeyedArchiver archivedDataWithRootObject:dict];
+    
+    [self mySendDataToPeers:data];
+}
+
+- (IBAction)sendDatabase:(id)sender
+{
+    NSError *error;
+    
+    NSString *docs      = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+    NSString *filepath  = [docs stringByAppendingPathComponent:@"Zorios.sqlite"];
+    NSString *coredata  = [[NSString alloc] initWithContentsOfFile:filepath encoding:NSUnicodeStringEncoding error:&error];
+    
+    if (!coredata) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Unable to get the database." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+        
+        return;
+    }
+    
+    NSDictionary *dict  = [NSDictionary dictionaryWithObjectsAndKeys:coredata, @"data", nil];
+    NSData *data        = [NSKeyedArchiver archivedDataWithRootObject:dict];
     
     [self mySendDataToPeers:data];
 }
@@ -153,8 +179,15 @@
 - (void)toggleButtons:(bool)connectWillBeHidden
 {
     [_connect setHidden:connectWillBeHidden];
-    [_send setHidden:!connectWillBeHidden];
     [_disconnect setHidden:!connectWillBeHidden];
+
+    if (_currentDevice != nil) {
+        [_send setHidden:!connectWillBeHidden];
+        [_synchronize setHidden:true];
+    } else {
+        [_send setHidden:true];
+        [_synchronize setHidden:!connectWillBeHidden];
+    }
 }
 
 @end
