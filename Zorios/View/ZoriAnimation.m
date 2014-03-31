@@ -44,9 +44,9 @@
         [self.pathLogic addObject:[NSValue valueWithCGPoint:CGPointMake(0, 100)]];
         [self.pathLogic addObject:[NSValue valueWithCGPoint:CGPointMake(100, 100)]];
         
-        self.pathGraphic    = [[NSMutableArray alloc] init];
-        UIView *el1         = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 50)];
-        el1.backgroundColor = [UIColor orangeColor];
+        self.pathGraphic        = [[NSMutableArray alloc] init];
+        UIView *el1             = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0, 50)];
+        el1.backgroundColor     = [UIColor orangeColor];
         [self.pathGraphic addObject:el1];
         [self addSubview:el1];
         
@@ -57,8 +57,8 @@
         [self.pathGraphic addObject:el2];
         [self addSubview:el2];
 
-        UIView *el3         = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 0, 50)];
-        el3.backgroundColor = [UIColor orangeColor];
+        UIView *el3             = [[UIView alloc] initWithFrame:CGRectMake(0, 100, 0, 50)];
+        el3.backgroundColor     = [UIColor orangeColor];
         [self.pathGraphic addObject:el3];
         [self addSubview:el3];
     }
@@ -77,8 +77,8 @@
     
     [self addSubview:self.cd];
     
-    NSValue *val = [self.pathLogic objectAtIndex:self.index];
-    CGPoint p    = [val CGPointValue];
+    NSValue *val    = [self.pathLogic objectAtIndex:self.index];
+    CGPoint p       = [val CGPointValue];
     [self move:p];
 }
 

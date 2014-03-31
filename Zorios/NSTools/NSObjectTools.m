@@ -73,3 +73,15 @@
 }
 
 @end
+
+#pragma mark -
+#pragma mark - Extended NSClasses
+
+@implementation NSArray (extendedFunctionalities)
+
+- (bool)isEmpty
+{
+    return self.count == 0;
+}
+
+@end

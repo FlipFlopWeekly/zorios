@@ -106,7 +106,7 @@
 
 - (void)receiveData:(NSData *)data fromPeer:(NSString *)peer inSession:(GKSession *)session context:(void *)context
 {
-    NSDictionary *dict  = (NSDictionary*)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    NSDictionary *dict = (NSDictionary*)[NSKeyedUnarchiver unarchiveObjectWithData:data];
     NSString *str;
     
     if (_currentDevice == nil) {
@@ -115,7 +115,7 @@
         str = [dict objectForKey:@"data"];
     }
     
-    UIAlertView *alert  = [[UIAlertView alloc] initWithTitle:@"Data received"
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Data received"
                                                      message:str
                                                     delegate:self
                                            cancelButtonTitle:@"OK"

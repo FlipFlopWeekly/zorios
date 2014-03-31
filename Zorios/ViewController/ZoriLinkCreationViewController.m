@@ -75,7 +75,8 @@
     [[f childByAutoId] setValue:@{
                   @"submitTime": [NSNumber numberWithInt:[[NSDate date] timeIntervalSince1970]],
                   @"url": self.inputLink.text,
-                  @"nbClick": [NSNumber numberWithInt:0]}];
+                  @"nbClick": [NSNumber numberWithInt:0]}
+     ];
 }
 
 #pragma mark - UITextFieldDelegate

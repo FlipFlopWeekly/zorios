@@ -8,10 +8,8 @@
 
 #import "ZoriLinksViewController.h"
 #import "ZoriLinkCell.h"
-#import "UISortPopover.h"
 
 #import "Link.h"
-
 #import <CoreData/CoreData.h>
 #import <Firebase/Firebase.h>
 
@@ -60,7 +58,7 @@ const int toDisableIfNoNetworkAccess = 1;
     
     NetworkStatus networkStatus = [self.internetReachability currentReachabilityStatus];
     if (networkStatus == NotReachable) {
-        for(UIBarButtonItem* bbi in self.toolbar.items) {
+        for (UIBarButtonItem* bbi in self.toolbar.items) {
             if (bbi.tag == toDisableIfNoNetworkAccess) {
                 [bbi setEnabled:false];
             }
@@ -95,7 +93,7 @@ const int toDisableIfNoNetworkAccess = 1;
 
 - (NSInteger)numberOfSectionsInCollectionView: (UICollectionView *)collectionView
 {
-    return 1;
+    return _zUnique;
 }
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)cv cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -209,8 +207,10 @@ const int toDisableIfNoNetworkAccess = 1;
         [self.synchroView removeFromSuperview];
     }
     
-    for(UIBarButtonItem* bbi in self.toolbar.items) {
-        [bbi setEnabled:(netStatus != NotReachable)];
+    for (UIBarButtonItem* bbi in self.toolbar.items) {
+        if (bbi.tag == 1) {
+            [bbi setEnabled:(netStatus != NotReachable)];
+        }
     }
     
     [self.collection reloadData];

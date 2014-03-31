@@ -14,3 +14,9 @@
 + (NSDictionary *)toDictionary:(NSObject *)obj;
 
 @end
+
+@interface NSArray (extendedFunctionalities)
+
+- (bool)isEmpty;
+
+@end

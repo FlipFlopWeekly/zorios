@@ -28,8 +28,7 @@
 		3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C82518D9DCA300488BB0 /* Main.storyboard */; };
 		3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83518D9F3E200488BB0 /* iTunesArtwork */; };
 		3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */; };
-		3DD15AE818E0848C00964BDD /* UISortPopover.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15AE718E0848C00964BDD /* UISortPopover.xib */; };
-		3DD15AEB18E0859B00964BDD /* UISortPopover.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AEA18E0859B00964BDD /* UISortPopover.m */; };
+		3D612A1C18E9628500A1A879 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A1B18E9628500A1A879 /* Constant.m */; };
 		3DD15AEF18E0DFDA00964BDD /* UIDismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AEE18E0DFDA00964BDD /* UIDismissSegue.m */; };
 		3DD15AF218E0E0C900964BDD /* ZoriLinkCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AF118E0E0C900964BDD /* ZoriLinkCreationViewController.m */; };
 		3DD15AF418E0F70300964BDD /* arrow_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15AF318E0F70300964BDD /* arrow_top.png */; };
@@ -116,9 +115,8 @@
 		3D47C82518D9DCA300488BB0 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		3D47C83518D9F3E200488BB0 /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; path = iTunesArtwork; sourceTree = "<group>"; };
 		3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
-		3DD15AE718E0848C00964BDD /* UISortPopover.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UISortPopover.xib; sourceTree = "<group>"; };
-		3DD15AE918E0859B00964BDD /* UISortPopover.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UISortPopover.h; sourceTree = "<group>"; };
-		3DD15AEA18E0859B00964BDD /* UISortPopover.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UISortPopover.m; sourceTree = "<group>"; };
+		3D612A1A18E9628500A1A879 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
+		3D612A1B18E9628500A1A879 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
 		3DD15AED18E0DFDA00964BDD /* UIDismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDismissSegue.h; sourceTree = "<group>"; };
 		3DD15AEE18E0DFDA00964BDD /* UIDismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDismissSegue.m; sourceTree = "<group>"; };
 		3DD15AF018E0E0C900964BDD /* ZoriLinkCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCreationViewController.h; sourceTree = "<group>"; };
@@ -278,6 +276,8 @@
 				3DE76A0B18DC426C00D5D732 /* View */,
 				3DE76A1218DC426C00D5D732 /* ViewController */,
 				3D47C7E918D9CF9600488BB0 /* Supporting Files */,
+				3D612A1A18E9628500A1A879 /* Constant.h */,
+				3D612A1B18E9628500A1A879 /* Constant.m */,
 			);
 			path = Zorios;
 			sourceTree = "<group>";
@@ -321,16 +321,6 @@
 			);
 			name = Assets;
 			path = Zorios/Assets;
-			sourceTree = "<group>";
-		};
-		3DD15AE618E0846800964BDD /* UIPopover */ = {
-			isa = PBXGroup;
-			children = (
-				3DD15AE718E0848C00964BDD /* UISortPopover.xib */,
-				3DD15AE918E0859B00964BDD /* UISortPopover.h */,
-				3DD15AEA18E0859B00964BDD /* UISortPopover.m */,
-			);
-			path = UIPopover;
 			sourceTree = "<group>";
 		};
 		3DD15AEC18E0DFB500964BDD /* Storyboard */ = {
@@ -385,7 +375,6 @@
 		3DE76A0B18DC426C00D5D732 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				3DD15AE618E0846800964BDD /* UIPopover */,
 				3DE76A0C18DC426C00D5D732 /* UITableView */,
 				3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */,
 				3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */,
@@ -614,7 +603,6 @@
 				3DE76A3518DC479E00D5D732 /* Icon-Spotlight-iOS7.png in Resources */,
 				3DD15B8718E5649200964BDD /* data_send.png in Resources */,
 				3DE76A3818DC479E00D5D732 /* Icon@2x.png in Resources */,
-				3DD15AE818E0848C00964BDD /* UISortPopover.xib in Resources */,
 				3DE76A3918DC479E00D5D732 /* logo.png in Resources */,
 				3DD15B2C18E430FA00964BDD /* icon_device.png in Resources */,
 				3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */,
@@ -642,9 +630,9 @@
 				3DD15B0918E167CD00964BDD /* NSObjectAttributeTools.m in Sources */,
 				3D47C7F318D9CF9600488BB0 /* ZORIAppDelegate.m in Sources */,
 				3DD15B0018E1047200964BDD /* Link.m in Sources */,
+				3D612A1C18E9628500A1A879 /* Constant.m in Sources */,
 				3D47C7EF18D9CF9600488BB0 /* main.m in Sources */,
 				3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */,
-				3DD15AEB18E0859B00964BDD /* UISortPopover.m in Sources */,
 				3DD15B1118E18A1D00964BDD /* ZoriSynchro.m in Sources */,
 				3DD15AEF18E0DFDA00964BDD /* UIDismissSegue.m in Sources */,
 				3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */,

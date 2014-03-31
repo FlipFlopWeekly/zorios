@@ -9,8 +9,8 @@
 #import "ZORIAppDelegate.h"
 
 @implementation ZORIAppDelegate
-@synthesize managedObjectContext = _managedObjectContext;
-@synthesize managedObjectModel = _managedObjectModel;
+@synthesize managedObjectContext       = _managedObjectContext;
+@synthesize managedObjectModel         = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
@@ -49,7 +49,8 @@
 }
 
 #pragma mark - Core data
-- (NSManagedObjectContext *) managedObjectContext {
+- (NSManagedObjectContext *) managedObjectContext
+{
     if (_managedObjectContext != nil) {
         return _managedObjectContext;
     }
@@ -62,7 +63,8 @@
     return _managedObjectContext;
 }
 
-- (NSManagedObjectModel *)managedObjectModel {
+- (NSManagedObjectModel *)managedObjectModel
+{
     if (_managedObjectModel != nil) {
         return _managedObjectModel;
     }
@@ -71,7 +73,8 @@
     return _managedObjectModel;
 }
 
-- (NSPersistentStoreCoordinator *)persistentStoreCoordinator {
+- (NSPersistentStoreCoordinator *)persistentStoreCoordinator
+{
     if (_persistentStoreCoordinator != nil) {
         return _persistentStoreCoordinator;
     }
@@ -89,7 +92,8 @@
     return _persistentStoreCoordinator;
 }
 
-- (NSString *)applicationDocumentsDirectory {
+- (NSString *)applicationDocumentsDirectory
+{
     return [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
 }
 

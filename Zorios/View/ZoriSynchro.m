@@ -17,15 +17,11 @@
         // Initialization code
         NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"ZoriSynchro" owner:self options:nil];
         
-        if ([arrayOfViews count] < 1) {
+        if ([arrayOfViews isEmpty] || ![[arrayOfViews objectAtIndex:_zFirstElement] isKindOfClass:[UIView class]]) {
             return nil;
         }
         
-        if (![[arrayOfViews objectAtIndex:0] isKindOfClass:[UIView class]]) {
-            return nil;
-        }
-        
-        self = [arrayOfViews objectAtIndex:0];
+        self = [arrayOfViews objectAtIndex:_zFirstElement];
         [self setFrame:frame];
     }
     return self;

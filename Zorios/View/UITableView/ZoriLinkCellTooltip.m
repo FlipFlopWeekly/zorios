@@ -18,11 +18,7 @@
         // Initialization code
         NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"ZoriLinkCell" owner:self options:nil];
         
-        if ([arrayOfViews count] < 1) {
-            return nil;
-        }
-        
-        if (![[arrayOfViews objectAtIndex:1] isKindOfClass:[UIView class]]) {
+        if ([arrayOfViews isEmpty] || ![[arrayOfViews objectAtIndex:1] isKindOfClass:[UIView class]]) {
             return nil;
         }
         

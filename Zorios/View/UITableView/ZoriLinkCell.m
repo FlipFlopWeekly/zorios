@@ -27,15 +27,11 @@
         // Initialization code
         NSArray *arrayOfViews = [[NSBundle mainBundle] loadNibNamed:@"ZoriLinkCell" owner:self options:nil];
         
-        if ([arrayOfViews count] < 1) {
+        if ([arrayOfViews isEmpty] || ![[arrayOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
             return nil;
         }
         
-        if (![[arrayOfViews objectAtIndex:0] isKindOfClass:[UICollectionViewCell class]]) {
-            return nil;
-        }
-        
-        self = [arrayOfViews objectAtIndex:0];
+        self = [arrayOfViews objectAtIndex:_zFirstElement];
         [self initTooltip];
         
         [self addObserver:self forKeyPath:@"link" options:NSKeyValueObservingOptionNew context:nil];
@@ -64,7 +60,7 @@
 - (void)drawRect:(CGRect)rect
 {
     // Drawing code
-    int duration         = 1.2;
+    int duration         = 0.6;
     CGPoint origin       = self.frame.origin;
     CGSize  size         = self.frame.size;
     float previousHeight = size.height;
@@ -112,21 +108,21 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
 {
     if ([keyPath isEqualToString:@"link"]) {
-        int nbClick = [self.link valueForKey:@"nbClick"] == nil ? 0 :
-        [[self.link valueForKey:@"nbClick"] intValue];
+        int nbClick         = [self.link valueForKey:@"nbClick"] == nil ? 0 :
+                              [[self.link valueForKey:@"nbClick"] intValue];
         
-        UIColor *color = nil;
-        NSString *hsla = [NSString stringWithFormat:@"hsla(%f, 99%%, 65%%, 1.0)", fminf(nbClick * 10, 100.0)];
-        NSScanner *scanner = [NSScanner scannerWithString:hsla];
+        UIColor *color      = nil;
+        NSString *hsla      = [NSString stringWithFormat:@"hsla(%f, 99%%, 65%%, 1.0)", fminf(nbClick * 10, 100.0)];
+        NSScanner *scanner  = [NSScanner scannerWithString:hsla];
         [scanner scanHSLColor:&color];
         
-        UIColor *colorB = nil;
-        NSString *hslaB = [NSString stringWithFormat:@"hsla(%f, 99%%, 30%%, 1.0)", fminf(nbClick * 10, 100.0)];
+        UIColor *colorB     = nil;
+        NSString *hslaB     = [NSString stringWithFormat:@"hsla(%f, 99%%, 30%%, 1.0)", fminf(nbClick * 10, 100.0)];
         NSScanner *scannerB = [NSScanner scannerWithString:hslaB];
         [scannerB scanHSLColor:&colorB];
         
-        float height = nbClick * 12 + 40;
-        height = fmin( 300, height );
+        float height        = nbClick * 12 + 40;
+        height              = fmin( 300, height );
         
         [_topBarColorView setFrame:CGRectMake(
                                               _topBarColorView.frame.origin.x,

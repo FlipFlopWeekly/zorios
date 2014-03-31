@@ -15,6 +15,7 @@
     #import <Foundation/Foundation.h>
 
     #import "Macro.h"
+    #import "Constant.h"
 
     #import "ZORIAppDelegate.h"
     #import "CoreDataManager.h"
