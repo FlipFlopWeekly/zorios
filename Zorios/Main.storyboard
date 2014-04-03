@@ -21,23 +21,39 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMY-PC-Fbz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-802" y="-320"/>
+            <point key="canvasLocation" x="-794" y="-364"/>
         </scene>
         <!--Zori Animation View Controller-->
         <scene sceneID="JFU-F9-GxK">
             <objects>
                 <viewController id="PCS-if-Oe1" customClass="ZoriAnimationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="TGH-qe-i4S"/>
-                        <viewControllerLayoutGuide type="bottom" id="9To-Wr-GEZ"/>
+                        <viewControllerLayoutGuide type="top" id="kR0-QA-ifo"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZNR-XB-gnm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="1XB-Og-4ag">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fhE-FE-2FQ" customClass="ZoriAnimation">
-                                <rect key="frame" x="44" y="42" width="232" height="484"/>
+                                <rect key="frame" x="44" y="42" width="232" height="396"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ctx-64-VeN">
+                                        <rect key="frame" x="20" y="375" width="192" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="15"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="192" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-q6-12t">
+                                        <rect key="frame" x="20" y="230" width="192" height="67"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                        <fontDescription key="fontDescription" name="Arial-BoldMT" family="Arial" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -48,8 +64,11 @@
                     <nil key="simulatedStatusBarMetrics"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="animation" destination="fhE-FE-2FQ" id="kGt-lN-uIR"/>
+                        <outlet property="description" destination="F6n-q6-12t" id="Pml-Je-hXr"/>
+                        <outlet property="version" destination="ctx-64-VeN" id="hgp-F9-Z49"/>
                         <segue destination="hjE-cm-4Nu" kind="modal" identifier="displayHome" animates="NO" id="efT-SA-tZK"/>
                     </connections>
                 </viewController>
@@ -57,16 +76,27 @@
             </objects>
             <point key="canvasLocation" x="-285" y="-320"/>
         </scene>
-        <!--View Controller-->
+        <!--Page View Controller-->
+        <scene sceneID="Cnv-Sw-JQ7">
+            <objects>
+                <pageViewController storyboardIdentifier="PresentationViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="none" id="54U-4L-jDR" sceneMemberID="viewController">
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ozd-nn-nPa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="417" y="417"/>
+        </scene>
+        <!--Zori Configuration View Controller-->
         <scene sceneID="8bG-pA-9R2">
             <objects>
-                <viewController id="vpq-V1-HHa" sceneMemberID="viewController">
+                <viewController id="vpq-V1-HHa" customClass="ZoriConfigurationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iXM-ml-el4"/>
-                        <viewControllerLayoutGuide type="bottom" id="GJR-hJ-wGE"/>
+                        <viewControllerLayoutGuide type="top" id="ZBQ-0C-qE5"/>
+                        <viewControllerLayoutGuide type="bottom" id="1cO-EL-LfO"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="RS2-kC-5nW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KUf-5a-aoh">
@@ -82,6 +112,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" systemItem="more" id="5kA-qf-f8R" userLabel="Tab Bar Item"/>
                     <navigationItem key="navigationItem" id="tqm-Fy-h4X"/>
+                    <nil key="simulatedStatusBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qor-dG-Eao" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -92,11 +123,11 @@
             <objects>
                 <viewController id="zZT-Uo-EjP" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="3nM-QV-Ih7"/>
-                        <viewControllerLayoutGuide type="bottom" id="1WC-UQ-eQe"/>
+                        <viewControllerLayoutGuide type="top" id="2xF-pA-Lsb"/>
+                        <viewControllerLayoutGuide type="bottom" id="RmR-YE-bpg"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="KbM-pF-Bsd">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="272" translatesAutoresizingMaskIntoConstraints="NO" id="vEi-qD-RtH">
@@ -185,7 +216,7 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBarItem key="tabBarItem" title="Profile" image="Icon.png" id="KGy-Ue-QHb"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Icon-Small.png" id="KGy-Ue-QHb"/>
                     <navigationItem key="navigationItem" id="ejp-y2-OLZ"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
@@ -214,20 +245,20 @@
             </objects>
             <point key="canvasLocation" x="975" y="-320"/>
         </scene>
-        <!--Zori Account View Controller - Synchro-->
+        <!--Zori Device View Controller - Synchro-->
         <scene sceneID="3tz-eS-Mce">
             <objects>
-                <viewController storyboardIdentifier="ZoriAccountViewController" id="8Gw-L5-NAG" customClass="ZoriAccountViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ZoriAccountViewController" id="8Gw-L5-NAG" customClass="ZoriDeviceViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="ftj-aA-SkQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="VP3-cz-SBp"/>
+                        <viewControllerLayoutGuide type="top" id="buj-yK-fZ8"/>
+                        <viewControllerLayoutGuide type="bottom" id="Olp-m2-adn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="CT7-jZ-z3w">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wgG-UN-69W">
-                                <rect key="frame" x="69" y="325" width="182" height="48"/>
+                                <rect key="frame" x="69" y="280" width="182" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Synchronize" image="icon_bluetooth.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -237,7 +268,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ud1-ky-DX8">
-                                <rect key="frame" x="69" y="205" width="182" height="48"/>
+                                <rect key="frame" x="69" y="140" width="182" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Show devices" image="icon_device.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -293,15 +324,15 @@
             <objects>
                 <viewController id="Bqp-4M-fWG" customClass="ZoriBluetoothMainViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="u9D-Wa-FWB"/>
-                        <viewControllerLayoutGuide type="bottom" id="8GP-8V-6by"/>
+                        <viewControllerLayoutGuide type="top" id="xkD-VU-Pmd"/>
+                        <viewControllerLayoutGuide type="bottom" id="BFe-iY-wuU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2TD-QY-vgS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FyH-SM-wG6">
-                                <rect key="frame" x="83" y="236" width="155" height="48"/>
+                                <rect key="frame" x="83" y="161" width="155" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="titleEdgeInsets" minX="20" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="Connect" image="icon_bluetooth.png">
@@ -312,7 +343,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BJJ-nD-BTB">
-                                <rect key="frame" x="83" y="236" width="155" height="48"/>
+                                <rect key="frame" x="83" y="161" width="155" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <inset key="titleEdgeInsets" minX="-47" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <inset key="imageEdgeInsets" minX="107" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -324,7 +355,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e4j-Ls-NEC">
-                                <rect key="frame" x="20" y="343" width="280" height="48"/>
+                                <rect key="frame" x="20" y="268" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Synchronize device" image="data_send.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -334,7 +365,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DxW-xY-EJ9">
-                                <rect key="frame" x="20" y="392" width="280" height="48"/>
+                                <rect key="frame" x="20" y="317" width="280" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title=" Send links" image="data_send.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -383,15 +414,15 @@
             <objects>
                 <viewController id="hjE-cm-4Nu" customClass="ZoriLinksViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="R3u-rB-RMt"/>
-                        <viewControllerLayoutGuide type="bottom" id="FdY-Hl-Hwz"/>
+                        <viewControllerLayoutGuide type="top" id="uTM-C3-TO1"/>
+                        <viewControllerLayoutGuide type="bottom" id="8ud-g8-idV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="gVW-E0-MaZ">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <collectionView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsVerticalScrollIndicator="NO" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" keyboardDismissMode="onDrag" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1X9-D7-P2Z">
-                                <rect key="frame" x="20" y="106" width="280" height="355"/>
+                                <rect key="frame" x="20" y="106" width="280" height="330"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="1" minimumInteritemSpacing="1" id="Yuw-LC-P8c">
@@ -449,10 +480,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6I8-TH-VdA"/>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" barStyle="black" prompted="NO"/>
                     <connections>
                         <outlet property="collection" destination="1X9-D7-P2Z" id="8xF-N5-P4R"/>
                         <outlet property="toolbar" destination="F1v-pN-UOB" id="Fdg-tm-V8A"/>
+                        <segue destination="54U-4L-jDR" kind="custom" id="f4s-Fk-k91"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="893-Sd-h0a" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -464,11 +496,11 @@
             <objects>
                 <viewController id="mA6-wn-GrI" customClass="ZoriLinkCreationViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="wOI-z6-3hV"/>
-                        <viewControllerLayoutGuide type="bottom" id="l3J-cI-6DT"/>
+                        <viewControllerLayoutGuide type="top" id="gGl-cx-89Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="IBo-1F-KzC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="fA5-bf-8Tp">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="♪ The pen explodes and busts, ink spills my guts! ♪" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Pwp-hY-ac2">
@@ -496,7 +528,7 @@
                                 </connections>
                             </button>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" barStyle="black" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXx-uf-u4A">
-                                <rect key="frame" x="0.0" y="5" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <items>
                                     <barButtonItem systemItem="cancel" id="REl-zs-qSm">
@@ -517,6 +549,7 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="doneItem" destination="DyH-Oa-C9W" id="afm-Zj-xVW"/>
                         <outlet property="inputLink" destination="Pwp-hY-ac2" id="n3Q-3g-07s"/>
@@ -529,7 +562,7 @@
     </scenes>
     <resources>
         <image name="Icon-120.png" width="120" height="120"/>
-        <image name="Icon.png" width="57" height="57"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
         <image name="arrow_top.png" width="128" height="128"/>
         <image name="data_send.png" width="64" height="64"/>
         <image name="icon_bluetooth.png" width="48" height="48"/>

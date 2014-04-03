@@ -46,7 +46,6 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         sharedInstance = [[NSObjectAttributeTools alloc] init];
-        // Do any other initialisation stuff here
     });
     
     return sharedInstance;

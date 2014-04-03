@@ -11,36 +11,20 @@
 
 @interface ZoriLinkCreationViewController ()
 
-@property (strong, nonatomic) IBOutlet UITextField *inputLink;
-@property (strong, nonatomic) IBOutlet UIBarButtonItem *doneItem;
+@property (strong, nonatomic) IBOutlet UITextField      *inputLink;
+@property (strong, nonatomic) IBOutlet UIBarButtonItem  *doneItem;
 
 @end
 
 @implementation ZoriLinkCreationViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     UIMenuController *theMenu = [UIMenuController sharedMenuController];
     CGRect selectionRect = CGRectMake(0, 0, 0, 0);
     [theMenu setTargetRect:selectionRect inView:self.view];
     [theMenu setMenuVisible:YES animated:YES];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -63,30 +47,28 @@
 #pragma mark - IBAction
 - (IBAction)copyFromClipboard:(id)sender
 {
-    UIPasteboard *pb = [UIPasteboard generalPasteboard];
-    self.inputLink.text = [pb string];
-    
-    [self.doneItem setEnabled:true];
+    UIPasteboard *pb        = [UIPasteboard generalPasteboard];
+    self.inputLink.text     = [pb string];
+    self.doneItem.enabled   = true;
 }
 
+// Creation of the link in the Firebase database.
 - (void)createLink
 {
-    Firebase* f = [[Firebase alloc] initWithUrl:@"https://shining-fire-3337.firebaseio.com/links"];
-    [[f childByAutoId] setValue:@{
-                  @"submitTime": [NSNumber numberWithInt:[[NSDate date] timeIntervalSince1970]],
-                  @"url": self.inputLink.text,
-                  @"nbClick": [NSNumber numberWithInt:0]}
-     ];
+    Firebase *connection = [[[FirebaseManager sharedConnection] childByAppendingPath:@"links"] childByAutoId];
+    [connection setValue:@{
+        @"submitTime": [NSNumber numberWithInt:[[NSDate date] timeIntervalSince1970]],
+        @"url": self.inputLink.text,
+        @"nbClick": [NSNumber numberWithInt:0]
+    }];
 }
 
 #pragma mark - UITextFieldDelegate
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     // If the return button is a "Done" one, dismiss the keyboard.
     if (textField.returnKeyType == UIReturnKeyDone) {
         [textField resignFirstResponder];
-        
         [self.doneItem setEnabled:true];
     }
     

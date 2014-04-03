@@ -14,6 +14,6 @@
 @property (strong, nonatomic) ZoriLinkCellTooltip   *tooltip;
 @property (nonatomic, retain) NSDictionary          *link;
 
-- (IBAction)toggleLink:(id)sender;
+- (void)toggleLink:(id)sender;
 
 @end

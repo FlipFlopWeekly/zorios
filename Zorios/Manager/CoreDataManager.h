@@ -10,8 +10,7 @@
 
 @interface CoreDataManager : NSObject
 
-+ (void)setCoreDataManagedObjectContext:(NSManagedObjectContext*) context;
-
++ (void)setCoreDataManagedObjectContext:(NSManagedObjectContext*)context;
 + (NSArray*)getAllEntityRecords:(NSString*)entityForName;
 + (void)removeCoreDataEntityRows:(NSString*)entityForName;
 

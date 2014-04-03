@@ -22,20 +22,23 @@
             return nil;
         }
         
-        self = [arrayOfViews objectAtIndex:1];
-        [self setFrame:frame];
+        self        = [arrayOfViews objectAtIndex:1];
+        self.frame  = frame;
+        
+        UIView* subView = (UIView*)[[self subviews] objectAtIndex:_zFirstElement];
+        UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(closeTooltip)];
+        [tapGR setNumberOfTapsRequired:1];
+        [tapGR setNumberOfTouchesRequired:1];
+        [subView addGestureRecognizer:tapGR];
+        [tapGR setDelegate:self];
     }
     
     return self;
 }
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect
+- (void)closeTooltip
 {
-    // Drawing code
+    [self.superview performSelector:NSSelectorFromString(@"toggleLink:") withObject:nil afterDelay:0.0];
 }
-*/
 
 @end

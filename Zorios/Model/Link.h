@@ -9,11 +9,10 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-
 @interface Link : NSManagedObject
 
-@property (nonatomic, retain) NSString * url;
-@property (nonatomic, retain) NSNumber * submitDate;
-@property (nonatomic, retain) NSDecimalNumber * nbClick;
+@property (nonatomic, retain) NSString          *url;
+@property (nonatomic, retain) NSNumber          *submitDate;
+@property (nonatomic, retain) NSDecimalNumber   *nbClick;
 
 @end

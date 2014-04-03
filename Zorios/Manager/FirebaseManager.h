@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Firebase/Firebase.h>
 
 @interface FirebaseManager : NSObject
 
-+ (FirebaseManager *)sharedInstance;
++ (Firebase *)sharedConnection;
 
 @end

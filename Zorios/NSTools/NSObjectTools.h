@@ -15,6 +15,7 @@
 
 @end
 
+// Extend NSClasses
 @interface NSArray (extendedFunctionalities)
 
 - (bool)isEmpty;

@@ -19,6 +19,7 @@
 
     #import "ZORIAppDelegate.h"
     #import "CoreDataManager.h"
+    #import "FirebaseManager.h"
 
     #import "NSObjectTools.h"
     #import "NSObjectAttributeTools.h"

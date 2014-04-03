@@ -11,6 +11,8 @@
 
 @interface ZoriAnimationViewController : UIViewController
 
-@property (strong, nonatomic) IBOutlet ZoriAnimation *animation;
+@property (strong, nonatomic) IBOutlet ZoriAnimation    *animation;
+@property (strong, nonatomic) IBOutlet UILabel          *description;
+@property (strong, nonatomic) IBOutlet UILabel          *version;
 
 @end

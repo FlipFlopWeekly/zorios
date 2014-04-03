@@ -21,7 +21,7 @@
 @property (strong, nonatomic) IBOutlet UIToolbar     *toolbar;
 @property (strong, nonatomic) UIView                 *synchroView;
 
-@property (nonatomic)        Reachability            *internetReachability;
+@property (nonatomic)         Reachability           *internetReachability;
 @property (nonatomic, retain) NSManagedObjectContext *managedObjectContext;
 
 @end
@@ -33,26 +33,22 @@ const int toDisableIfNoNetworkAccess = 1;
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
     [self.collection registerClass:[ZoriLinkCell class] forCellWithReuseIdentifier:@"ZoriLinkCell"];
     ZORIAppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     self.managedObjectContext    = appDelegate.managedObjectContext;
     
     _linkFromCoreData = [CoreDataManager getAllEntityRecords:@"Link"];
-    
-    Firebase* f = [[Firebase alloc] initWithUrl:@"https://shining-fire-3337.firebaseio.com/links"];
-    
     _links = [[NSMutableOrderedSet alloc] init];
     
-    [f observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
+    Firebase *connection = [[FirebaseManager sharedConnection] childByAppendingPath:@"links"];
+    [connection observeEventType:FEventTypeValue withBlock:^(FDataSnapshot *snapshot) {
         [self observeFirebase:snapshot];
     }];
     
     [self.collection reloadData];
     
+    // Reachability initialisation.
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(reachabilityChanged:) name:kReachabilityChangedNotification object:nil];
-    
     self.internetReachability = [Reachability reachabilityForInternetConnection];
 	[self.internetReachability startNotifier];
     
@@ -66,21 +62,21 @@ const int toDisableIfNoNetworkAccess = 1;
     }
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 - (BOOL)prefersStatusBarHidden
 {
     return true;
 }
 
+#pragma mark - UIScrollView delegate
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
+{
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"hideElement" object:nil];
+}
+
 #pragma mark - UICollectionView Datasource
 - (NSInteger)collectionView:(UICollectionView *)view numberOfItemsInSection:(NSInteger)section
 {
-    int numberOfItemsInSection = fmax(_linkFromCoreData.count, _links.count);
+    int numberOfItemsInSection  = fmax(_linkFromCoreData.count, _links.count);
     NetworkStatus networkStatus = [self.internetReachability currentReachabilityStatus];
     
     if ((numberOfItemsInSection == 0) && (networkStatus == NotReachable)) {
@@ -112,7 +108,6 @@ const int toDisableIfNoNetworkAccess = 1;
 }
 
 #pragma mark - Sort entity
-
 - (IBAction)sortResults:(id)sender
 {
     UIActionSheet *action = [[UIActionSheet alloc] initWithTitle:@"Trier les titres" delegate:self cancelButtonTitle:@"Annuler" destructiveButtonTitle:nil otherButtonTitles:@"Date de publication", nil];
@@ -133,7 +128,6 @@ const int toDisableIfNoNetworkAccess = 1;
 }
 
 #pragma mark - UIActionsheetDelegate
-
 - (void)actionSheet:(UIActionSheet *)actionSheet clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (![[actionSheet buttonTitleAtIndex:buttonIndex] isEqualToString:@"Annuler"]) {
@@ -142,21 +136,13 @@ const int toDisableIfNoNetworkAccess = 1;
     }
 }
 
-#pragma mark - UICollectionViewDelegate
-- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Custom code : selection
-}
-
-#pragma mark – UICollectionViewDelegateFlowLayout
-
+#pragma mark - UICollectionViewDelegateFlowLayout
 - (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath
 {
     return CGSizeMake(40, 300);
 }
 
-- (UIEdgeInsets)collectionView:
-(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
+- (UIEdgeInsets)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout*)collectionViewLayout insetForSectionAtIndex:(NSInteger)section
 {
     return UIEdgeInsetsMake(0, 0, 0, 0);
 }
@@ -208,7 +194,7 @@ const int toDisableIfNoNetworkAccess = 1;
     }
     
     for (UIBarButtonItem* bbi in self.toolbar.items) {
-        if (bbi.tag == 1) {
+        if (bbi.tag == toDisableIfNoNetworkAccess) {
             [bbi setEnabled:(netStatus != NotReachable)];
         }
     }

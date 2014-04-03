@@ -15,6 +15,7 @@
 @dynamic submitDate;
 @dynamic nbClick;
 
+// Override description method to display the key/value of the current object attributes.
 - (NSString *)description
 {
     return [NSObjectTools formatDescriptionFor:self];

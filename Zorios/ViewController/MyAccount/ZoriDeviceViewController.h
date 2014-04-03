@@ -1,5 +1,5 @@
 //
-//  ZoriAccountViewController.h
+//  ZoriDeviceViewController.h
 //  Zorios
 //
 //  Created by iGitScor on 27/03/2014.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoriAccountViewController : UIViewController
+@interface ZoriDeviceViewController : UIViewController
 
 @end

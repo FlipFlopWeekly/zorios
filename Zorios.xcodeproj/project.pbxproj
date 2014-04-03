@@ -12,7 +12,6 @@
 		3D47C7E318D9CF9600488BB0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D47C7E218D9CF9600488BB0 /* UIKit.framework */; };
 		3D47C7E518D9CF9600488BB0 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D47C7E418D9CF9600488BB0 /* CFNetwork.framework */; };
 		3D47C7E718D9CF9600488BB0 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D47C7E618D9CF9600488BB0 /* Security.framework */; };
-		3D47C7ED18D9CF9600488BB0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C7EB18D9CF9600488BB0 /* InfoPlist.strings */; };
 		3D47C7EF18D9CF9600488BB0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47C7EE18D9CF9600488BB0 /* main.m */; };
 		3D47C7F318D9CF9600488BB0 /* ZORIAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D47C7F218D9CF9600488BB0 /* ZORIAppDelegate.m */; };
 		3D47C7FB18D9CF9600488BB0 /* Firebase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D47C7FA18D9CF9600488BB0 /* Firebase.framework */; };
@@ -29,8 +28,17 @@
 		3D47C84618D9F3E200488BB0 /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83518D9F3E200488BB0 /* iTunesArtwork */; };
 		3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */ = {isa = PBXBuildFile; fileRef = 3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */; };
 		3D612A1C18E9628500A1A879 /* Constant.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A1B18E9628500A1A879 /* Constant.m */; };
+		3D612A2718E96F7700A1A879 /* ZoriLinkCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A1F18E96F7700A1A879 /* ZoriLinkCreationViewController.m */; };
+		3D612A2818E96F7700A1A879 /* ZoriLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A2118E96F7700A1A879 /* ZoriLinksViewController.m */; };
+		3D612A2918E96F7700A1A879 /* ZoriDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A2418E96F7700A1A879 /* ZoriDeviceViewController.m */; };
+		3D612A2A18E96F7700A1A879 /* ZoriBluetoothMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A2618E96F7700A1A879 /* ZoriBluetoothMainViewController.m */; };
+		3D612A2D18E96F9700A1A879 /* ZoriConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A2C18E96F9700A1A879 /* ZoriConfigurationViewController.m */; };
+		3D612A2F18E9746C00A1A879 /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D612A2E18E9746C00A1A879 /* GameKit.framework */; };
+		3D612A3418E9958D00A1A879 /* Application.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3D612A3618E9958D00A1A879 /* Application.strings */; };
+		3D612A3918E99B2A00A1A879 /* ZoriAnnotation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3D612A3818E99B2A00A1A879 /* ZoriAnnotation.xib */; };
+		3D612A3B18E99DA700A1A879 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D612A3A18E99DA700A1A879 /* QuartzCore.framework */; };
+		3D612A3E18E9AA2000A1A879 /* ZoriAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3D612A3D18E9AA2000A1A879 /* ZoriAnnotation.m */; };
 		3DD15AEF18E0DFDA00964BDD /* UIDismissSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AEE18E0DFDA00964BDD /* UIDismissSegue.m */; };
-		3DD15AF218E0E0C900964BDD /* ZoriLinkCreationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AF118E0E0C900964BDD /* ZoriLinkCreationViewController.m */; };
 		3DD15AF418E0F70300964BDD /* arrow_top.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15AF318E0F70300964BDD /* arrow_top.png */; };
 		3DD15AF818E0FF6800964BDD /* Zorios.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15AF618E0FF6800964BDD /* Zorios.xcdatamodeld */; };
 		3DD15AFD18E100FB00964BDD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD15AFC18E100FB00964BDD /* CoreData.framework */; };
@@ -44,18 +52,14 @@
 		3DD15B1618E18AA400964BDD /* memory_save.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1418E18AA400964BDD /* memory_save.png */; };
 		3DD15B1718E18AA400964BDD /* paper_plane.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1518E18AA400964BDD /* paper_plane.png */; };
 		3DD15B1918E18CF200964BDD /* paper_network.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B1818E18CF200964BDD /* paper_network.png */; };
-		3DD15B2218E349D100964BDD /* ZoriBluetoothMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B2118E349D100964BDD /* ZoriBluetoothMainViewController.m */; };
 		3DD15B2A18E42FC800964BDD /* icon_bluetooth.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B2918E42FC800964BDD /* icon_bluetooth.png */; };
 		3DD15B2C18E430FA00964BDD /* icon_device.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B2B18E430FA00964BDD /* icon_device.png */; };
 		3DD15B2E18E431AA00964BDD /* icon_admin.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B2D18E431AA00964BDD /* icon_admin.png */; };
-		3DD15B3118E4385500964BDD /* ZoriAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DD15B3018E4385500964BDD /* ZoriAccountViewController.m */; };
 		3DD15B3318E43E3D00964BDD /* icon_item_device.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B3218E43E3D00964BDD /* icon_item_device.png */; };
-		3DD15B3718E4767600964BDD /* GameKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DD15B3618E4767600964BDD /* GameKit.framework */; };
 		3DD15B8718E5649200964BDD /* data_send.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD15B8618E5649200964BDD /* data_send.png */; };
 		3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */; };
 		3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */; };
 		3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */; };
-		3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1418DC426C00D5D732 /* ZoriLinksViewController.m */; };
 		3DE76A1B18DC46CC00D5D732 /* ZoriAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */; };
 		3DE76A2C18DC479E00D5D732 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A1D18DC479D00D5D732 /* Icon-120.png */; };
 		3DE76A2D18DC479E00D5D732 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DE76A1E18DC479D00D5D732 /* Icon-72.png */; };
@@ -97,7 +101,6 @@
 		3D47C7E418D9CF9600488BB0 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		3D47C7E618D9CF9600488BB0 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		3D47C7EA18D9CF9600488BB0 /* Zorios-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Zorios-Info.plist"; sourceTree = "<group>"; };
-		3D47C7EC18D9CF9600488BB0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3D47C7EE18D9CF9600488BB0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3D47C7F018D9CF9600488BB0 /* Zorios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zorios-Prefix.pch"; sourceTree = "<group>"; };
 		3D47C7F118D9CF9600488BB0 /* ZORIAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZORIAppDelegate.h; sourceTree = "<group>"; };
@@ -117,10 +120,26 @@
 		3D47C83618D9F3E200488BB0 /* iTunesArtwork@2x */ = {isa = PBXFileReference; lastKnownFileType = file; path = "iTunesArtwork@2x"; sourceTree = "<group>"; };
 		3D612A1A18E9628500A1A879 /* Constant.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constant.h; sourceTree = "<group>"; };
 		3D612A1B18E9628500A1A879 /* Constant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constant.m; sourceTree = "<group>"; };
+		3D612A1E18E96F7700A1A879 /* ZoriLinkCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCreationViewController.h; sourceTree = "<group>"; };
+		3D612A1F18E96F7700A1A879 /* ZoriLinkCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCreationViewController.m; sourceTree = "<group>"; };
+		3D612A2018E96F7700A1A879 /* ZoriLinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinksViewController.h; sourceTree = "<group>"; };
+		3D612A2118E96F7700A1A879 /* ZoriLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinksViewController.m; sourceTree = "<group>"; };
+		3D612A2318E96F7700A1A879 /* ZoriDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriDeviceViewController.h; sourceTree = "<group>"; };
+		3D612A2418E96F7700A1A879 /* ZoriDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriDeviceViewController.m; sourceTree = "<group>"; };
+		3D612A2518E96F7700A1A879 /* ZoriBluetoothMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriBluetoothMainViewController.h; sourceTree = "<group>"; };
+		3D612A2618E96F7700A1A879 /* ZoriBluetoothMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriBluetoothMainViewController.m; sourceTree = "<group>"; };
+		3D612A2B18E96F9700A1A879 /* ZoriConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriConfigurationViewController.h; sourceTree = "<group>"; };
+		3D612A2C18E96F9700A1A879 /* ZoriConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriConfigurationViewController.m; sourceTree = "<group>"; };
+		3D612A2E18E9746C00A1A879 /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
+		3D612A3118E974D500A1A879 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3D612A3518E9958D00A1A879 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Application.strings; sourceTree = "<group>"; };
+		3D612A3718E9959000A1A879 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Application.strings; sourceTree = "<group>"; };
+		3D612A3818E99B2A00A1A879 /* ZoriAnnotation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriAnnotation.xib; sourceTree = "<group>"; };
+		3D612A3A18E99DA700A1A879 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3D612A3C18E9AA2000A1A879 /* ZoriAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriAnnotation.h; sourceTree = "<group>"; };
+		3D612A3D18E9AA2000A1A879 /* ZoriAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriAnnotation.m; sourceTree = "<group>"; };
 		3DD15AED18E0DFDA00964BDD /* UIDismissSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UIDismissSegue.h; sourceTree = "<group>"; };
 		3DD15AEE18E0DFDA00964BDD /* UIDismissSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UIDismissSegue.m; sourceTree = "<group>"; };
-		3DD15AF018E0E0C900964BDD /* ZoriLinkCreationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCreationViewController.h; sourceTree = "<group>"; };
-		3DD15AF118E0E0C900964BDD /* ZoriLinkCreationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCreationViewController.m; sourceTree = "<group>"; };
 		3DD15AF318E0F70300964BDD /* arrow_top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_top.png; sourceTree = "<group>"; };
 		3DD15AF718E0FF6800964BDD /* Zorios.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Zorios.xcdatamodel; sourceTree = "<group>"; };
 		3DD15AFC18E100FB00964BDD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -140,25 +159,18 @@
 		3DD15B1418E18AA400964BDD /* memory_save.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = memory_save.png; sourceTree = "<group>"; };
 		3DD15B1518E18AA400964BDD /* paper_plane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_plane.png; sourceTree = "<group>"; };
 		3DD15B1818E18CF200964BDD /* paper_network.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = paper_network.png; sourceTree = "<group>"; };
-		3DD15B2018E349D100964BDD /* ZoriBluetoothMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriBluetoothMainViewController.h; sourceTree = "<group>"; };
-		3DD15B2118E349D100964BDD /* ZoriBluetoothMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriBluetoothMainViewController.m; sourceTree = "<group>"; };
 		3DD15B2318E421B500964BDD /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		3DD15B2918E42FC800964BDD /* icon_bluetooth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_bluetooth.png; sourceTree = "<group>"; };
 		3DD15B2B18E430FA00964BDD /* icon_device.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_device.png; sourceTree = "<group>"; };
 		3DD15B2D18E431AA00964BDD /* icon_admin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_admin.png; sourceTree = "<group>"; };
-		3DD15B2F18E4385500964BDD /* ZoriAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriAccountViewController.h; sourceTree = "<group>"; };
-		3DD15B3018E4385500964BDD /* ZoriAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriAccountViewController.m; sourceTree = "<group>"; };
 		3DD15B3218E43E3D00964BDD /* icon_item_device.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_item_device.png; sourceTree = "<group>"; };
 		3DD15B3418E452FB00964BDD /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		3DD15B3618E4767600964BDD /* GameKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameKit.framework; path = System/Library/Frameworks/GameKit.framework; sourceTree = SDKROOT; };
 		3DD15B8618E5649200964BDD /* data_send.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = data_send.png; sourceTree = "<group>"; };
 		3DE76A0D18DC426C00D5D732 /* ZoriLinkCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCell.h; sourceTree = "<group>"; };
 		3DE76A0E18DC426C00D5D732 /* ZoriLinkCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCell.m; sourceTree = "<group>"; };
 		3DE76A0F18DC426C00D5D732 /* ZoriLinkCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ZoriLinkCell.xib; sourceTree = "<group>"; };
 		3DE76A1018DC426C00D5D732 /* ZoriLinkCellTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinkCellTooltip.h; sourceTree = "<group>"; };
 		3DE76A1118DC426C00D5D732 /* ZoriLinkCellTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinkCellTooltip.m; sourceTree = "<group>"; };
-		3DE76A1318DC426C00D5D732 /* ZoriLinksViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriLinksViewController.h; sourceTree = "<group>"; };
-		3DE76A1418DC426C00D5D732 /* ZoriLinksViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriLinksViewController.m; sourceTree = "<group>"; };
 		3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZoriAnimation.h; sourceTree = "<group>"; };
 		3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZoriAnimation.m; sourceTree = "<group>"; };
 		3DE76A1D18DC479D00D5D732 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-120.png"; sourceTree = "<group>"; };
@@ -192,7 +204,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DD15B3718E4767600964BDD /* GameKit.framework in Frameworks */,
+				3D612A3B18E99DA700A1A879 /* QuartzCore.framework in Frameworks */,
+				3D612A2F18E9746C00A1A879 /* GameKit.framework in Frameworks */,
 				3DD15AFD18E100FB00964BDD /* CoreData.framework in Frameworks */,
 				3D47C82418D9D65F00488BB0 /* libc++.dylib in Frameworks */,
 				3D47C82218D9D64E00488BB0 /* libicucore.dylib in Frameworks */,
@@ -244,7 +257,8 @@
 		3D47C7DD18D9CF9600488BB0 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				3DD15B3618E4767600964BDD /* GameKit.framework */,
+				3D612A3A18E99DA700A1A879 /* QuartzCore.framework */,
+				3D612A2E18E9746C00A1A879 /* GameKit.framework */,
 				3DD15B3418E452FB00964BDD /* CoreLocation.framework */,
 				3DD15B2318E421B500964BDD /* CoreBluetooth.framework */,
 				3DD15AFC18E100FB00964BDD /* CoreData.framework */,
@@ -278,6 +292,7 @@
 				3D47C7E918D9CF9600488BB0 /* Supporting Files */,
 				3D612A1A18E9628500A1A879 /* Constant.h */,
 				3D612A1B18E9628500A1A879 /* Constant.m */,
+				3D612A3618E9958D00A1A879 /* Application.strings */,
 			);
 			path = Zorios;
 			sourceTree = "<group>";
@@ -286,7 +301,6 @@
 			isa = PBXGroup;
 			children = (
 				3D47C7EA18D9CF9600488BB0 /* Zorios-Info.plist */,
-				3D47C7EB18D9CF9600488BB0 /* InfoPlist.strings */,
 				3D47C7EE18D9CF9600488BB0 /* main.m */,
 				3D47C7F018D9CF9600488BB0 /* Zorios-Prefix.pch */,
 			);
@@ -321,6 +335,30 @@
 			);
 			name = Assets;
 			path = Zorios/Assets;
+			sourceTree = "<group>";
+		};
+		3D612A1D18E96F7700A1A879 /* Links */ = {
+			isa = PBXGroup;
+			children = (
+				3D612A1E18E96F7700A1A879 /* ZoriLinkCreationViewController.h */,
+				3D612A1F18E96F7700A1A879 /* ZoriLinkCreationViewController.m */,
+				3D612A2018E96F7700A1A879 /* ZoriLinksViewController.h */,
+				3D612A2118E96F7700A1A879 /* ZoriLinksViewController.m */,
+			);
+			path = Links;
+			sourceTree = "<group>";
+		};
+		3D612A2218E96F7700A1A879 /* MyAccount */ = {
+			isa = PBXGroup;
+			children = (
+				3D612A2518E96F7700A1A879 /* ZoriBluetoothMainViewController.h */,
+				3D612A2618E96F7700A1A879 /* ZoriBluetoothMainViewController.m */,
+				3D612A2B18E96F9700A1A879 /* ZoriConfigurationViewController.h */,
+				3D612A2C18E96F9700A1A879 /* ZoriConfigurationViewController.m */,
+				3D612A2318E96F7700A1A879 /* ZoriDeviceViewController.h */,
+				3D612A2418E96F7700A1A879 /* ZoriDeviceViewController.m */,
+			);
+			path = MyAccount;
 			sourceTree = "<group>";
 		};
 		3DD15AEC18E0DFB500964BDD /* Storyboard */ = {
@@ -378,6 +416,9 @@
 				3DE76A0C18DC426C00D5D732 /* UITableView */,
 				3DE76A1918DC46CC00D5D732 /* ZoriAnimation.h */,
 				3DE76A1A18DC46CC00D5D732 /* ZoriAnimation.m */,
+				3D612A3C18E9AA2000A1A879 /* ZoriAnnotation.h */,
+				3D612A3D18E9AA2000A1A879 /* ZoriAnnotation.m */,
+				3D612A3818E99B2A00A1A879 /* ZoriAnnotation.xib */,
 				3DD15B0F18E18A1D00964BDD /* ZoriSynchro.h */,
 				3DD15B1018E18A1D00964BDD /* ZoriSynchro.m */,
 				3DD15B1218E18A3200964BDD /* ZoriSynchro.xib */,
@@ -400,16 +441,10 @@
 		3DE76A1218DC426C00D5D732 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3D612A1D18E96F7700A1A879 /* Links */,
+				3D612A2218E96F7700A1A879 /* MyAccount */,
 				3DE76A3F18DC78A200D5D732 /* ZoriAnimationViewController.h */,
 				3DE76A4018DC78A200D5D732 /* ZoriAnimationViewController.m */,
-				3DD15B2F18E4385500964BDD /* ZoriAccountViewController.h */,
-				3DD15B3018E4385500964BDD /* ZoriAccountViewController.m */,
-				3DD15B2018E349D100964BDD /* ZoriBluetoothMainViewController.h */,
-				3DD15B2118E349D100964BDD /* ZoriBluetoothMainViewController.m */,
-				3DE76A1318DC426C00D5D732 /* ZoriLinksViewController.h */,
-				3DE76A1418DC426C00D5D732 /* ZoriLinksViewController.m */,
-				3DD15AF018E0E0C900964BDD /* ZoriLinkCreationViewController.h */,
-				3DD15AF118E0E0C900964BDD /* ZoriLinkCreationViewController.m */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -547,6 +582,14 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = FlipFlopCrew;
 				TargetAttributes = {
+					3D47C7DA18D9CF9600488BB0 = {
+						DevelopmentTeam = C6ERSDMLV9;
+						SystemCapabilities = {
+							com.apple.GameCenter = {
+								enabled = 0;
+							};
+						};
+					};
 					3D47C80418D9CF9700488BB0 = {
 						TestTargetID = 3D47C7DA18D9CF9600488BB0;
 					};
@@ -559,6 +602,7 @@
 			knownRegions = (
 				en,
 				Base,
+				fr,
 			);
 			mainGroup = 3D47C7D218D9CF9600488BB0;
 			productRefGroup = 3D47C7DC18D9CF9600488BB0 /* Products */;
@@ -585,7 +629,6 @@
 				3DD15AF418E0F70300964BDD /* arrow_top.png in Resources */,
 				3DE76A3A18DC479E00D5D732 /* logo@2x.png in Resources */,
 				3DE76A3418DC479E00D5D732 /* Icon-Small@2x.png in Resources */,
-				3D47C7ED18D9CF9600488BB0 /* InfoPlist.strings in Resources */,
 				3DD15B1718E18AA400964BDD /* paper_plane.png in Resources */,
 				3D47C82618D9DCA300488BB0 /* Main.storyboard in Resources */,
 				3DE76A3018DC479E00D5D732 /* Icon-76@2x.png in Resources */,
@@ -601,11 +644,13 @@
 				3DE76A2D18DC479E00D5D732 /* Icon-72.png in Resources */,
 				3DE76A2F18DC479E00D5D732 /* Icon-76.png in Resources */,
 				3DE76A3518DC479E00D5D732 /* Icon-Spotlight-iOS7.png in Resources */,
+				3D612A3918E99B2A00A1A879 /* ZoriAnnotation.xib in Resources */,
 				3DD15B8718E5649200964BDD /* data_send.png in Resources */,
 				3DE76A3818DC479E00D5D732 /* Icon@2x.png in Resources */,
 				3DE76A3918DC479E00D5D732 /* logo.png in Resources */,
 				3DD15B2C18E430FA00964BDD /* icon_device.png in Resources */,
 				3DE76A1618DC426C00D5D732 /* ZoriLinkCell.xib in Resources */,
+				3D612A3418E9958D00A1A879 /* Application.strings in Resources */,
 				3DE76A3618DC479E00D5D732 /* Icon-Spotlight-iOS7@2x.png in Resources */,
 				3DD15B1618E18AA400964BDD /* memory_save.png in Resources */,
 				3D47C84718D9F3E200488BB0 /* iTunesArtwork@2x in Resources */,
@@ -631,22 +676,24 @@
 				3D47C7F318D9CF9600488BB0 /* ZORIAppDelegate.m in Sources */,
 				3DD15B0018E1047200964BDD /* Link.m in Sources */,
 				3D612A1C18E9628500A1A879 /* Constant.m in Sources */,
+				3D612A2818E96F7700A1A879 /* ZoriLinksViewController.m in Sources */,
 				3D47C7EF18D9CF9600488BB0 /* main.m in Sources */,
-				3DE76A1818DC426C00D5D732 /* ZoriLinksViewController.m in Sources */,
 				3DD15B1118E18A1D00964BDD /* ZoriSynchro.m in Sources */,
 				3DD15AEF18E0DFDA00964BDD /* UIDismissSegue.m in Sources */,
 				3DE76A4118DC78A200D5D732 /* ZoriAnimationViewController.m in Sources */,
+				3D612A2D18E96F9700A1A879 /* ZoriConfigurationViewController.m in Sources */,
 				3DE76A1718DC426C00D5D732 /* ZoriLinkCellTooltip.m in Sources */,
+				3D612A2718E96F7700A1A879 /* ZoriLinkCreationViewController.m in Sources */,
 				3DD15B0A18E167CD00964BDD /* NSObjectTools.m in Sources */,
 				3DE76A4518DC9D7C00D5D732 /* FirebaseManager.m in Sources */,
 				3DE76A1B18DC46CC00D5D732 /* ZoriAnimation.m in Sources */,
-				3DD15B3118E4385500964BDD /* ZoriAccountViewController.m in Sources */,
-				3DD15B2218E349D100964BDD /* ZoriBluetoothMainViewController.m in Sources */,
+				3D612A3E18E9AA2000A1A879 /* ZoriAnnotation.m in Sources */,
 				3DD15AF818E0FF6800964BDD /* Zorios.xcdatamodeld in Sources */,
 				3DE76A1518DC426C00D5D732 /* ZoriLinkCell.m in Sources */,
 				3DD15B0318E161B800964BDD /* CoreDataManager.m in Sources */,
-				3DD15AF218E0E0C900964BDD /* ZoriLinkCreationViewController.m in Sources */,
 				3DD15B0E18E1711600964BDD /* Reachability.m in Sources */,
+				3D612A2918E96F7700A1A879 /* ZoriDeviceViewController.m in Sources */,
+				3D612A2A18E96F7700A1A879 /* ZoriBluetoothMainViewController.m in Sources */,
 				3DE76A4B18E0449F00D5D732 /* UIColorHTMLColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -670,20 +717,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		3D47C7EB18D9CF9600488BB0 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				3D47C7EC18D9CF9600488BB0 /* en */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		3D47C80F18D9CF9700488BB0 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				3D47C81018D9CF9700488BB0 /* en */,
+				3D612A3118E974D500A1A879 /* fr */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3D612A3618E9958D00A1A879 /* Application.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3D612A3518E9958D00A1A879 /* fr */,
+				3D612A3718E9959000A1A879 /* en */,
+			);
+			name = Application.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

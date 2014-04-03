@@ -11,7 +11,7 @@
 
 @interface ZORIAppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic)           UIWindow                        *window;
 
 @property (nonatomic, retain, readonly) NSManagedObjectModel            *managedObjectModel;
 @property (nonatomic, retain, readonly) NSManagedObjectContext          *managedObjectContext;

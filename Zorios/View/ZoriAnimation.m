@@ -24,21 +24,10 @@
 @synthesize index;
 @synthesize completed;
 
-- (id)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        // Initialization code
-    }
-    return self;
-}
-
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     self = [super initWithCoder:aDecoder];
-    if (self) {
-        // Initialization code
-        
+    if (self) {        
         self.pathLogic = [[NSMutableArray alloc] init];
         [self.pathLogic addObject:[NSValue valueWithCGPoint:CGPointMake(100, 0)]];
         [self.pathLogic addObject:[NSValue valueWithCGPoint:CGPointMake(0, 100)]];
@@ -146,9 +135,10 @@
     }
 }
 
+// Specify to the potential observer that the animation is completed
 - (void)complete
 {
-    [self setCompleted:true];
+    self.completed = true;
 }
 
 @end

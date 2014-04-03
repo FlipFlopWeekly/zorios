@@ -18,20 +18,9 @@
 @implementation ZoriBluetoothMainViewController
 @synthesize picker;
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
     [self toggleButtons:NO];
 }
 
@@ -43,13 +32,8 @@
 
 - (void)viewWillDisappear:(BOOL)animated
 {
+    todolog(@"do something ? ;)");
     [super viewWillDisappear:animated];
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (BOOL)prefersStatusBarHidden
@@ -57,19 +41,7 @@
     return true;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 #pragma mark - GKPeerPickerController delegate
-
 - (void)peerPickerController:(GKPeerPickerController *)localPicker didConnectPeer:(NSString *)peerID toSession:(GKSession *)session
 {
     self.currentSession             = session;
@@ -86,7 +58,6 @@
 }
 
 #pragma mark - GKSession delegate
-
 - (void)session:(GKSession *)session peer:(NSString *)peerID didChangeState:(GKPeerConnectionState)state
 {
     if (state == GKPeerStateDisconnected) {
@@ -124,7 +95,6 @@
 }
 
 #pragma mark - IBAction
-
 - (IBAction)synchronizeDevice:(id)sender
 {
     UIDevice *device    = [UIDevice currentDevice];
@@ -157,7 +127,7 @@
     [self mySendDataToPeers:data];
 }
 
-
+// Action perform with the disconnect button. Close the bluetooth connection.
 - (IBAction)disconnect:(id)sender
 {
     [self.currentSession disconnectFromAllPeers];
@@ -166,6 +136,7 @@
     [self toggleButtons:NO];
 }
 
+// Action perform with the connect button. Initialize peer connection.
 - (IBAction)connect:(id)sender
 {
     picker                      = [[GKPeerPickerController alloc] init];

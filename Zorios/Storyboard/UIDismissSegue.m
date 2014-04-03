@@ -12,7 +12,7 @@
 
 - (void)perform
 {
-    UIViewController *src = (UIViewController *) self.sourceViewController;
+    UIViewController *src = (UIViewController *)self.sourceViewController;
     [src dismissViewControllerAnimated:false completion:nil];
 }
 

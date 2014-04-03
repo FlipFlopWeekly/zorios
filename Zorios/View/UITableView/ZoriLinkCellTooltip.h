@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ZoriLinkCellTooltip : UIView
+@interface ZoriLinkCellTooltip : UIView <UIGestureRecognizerDelegate>
 
 @property (strong, nonatomic) IBOutlet UIButton *playButton;
 @property (strong, nonatomic) IBOutlet UIButton *starButton;
